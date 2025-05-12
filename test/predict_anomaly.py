@@ -124,8 +124,7 @@ def predict_anomaly(csv_file, output_file=None, threshold=None, model_path=None,
         total_records = len(new_data)
         
         if verbose:
-            print(f"
-KẾT QUẢ PHÁT HIỆN BẤT THƯỜNG:")
+            print(f"KẾT QUẢ PHÁT HIỆN BẤT THƯỜNG:")
             print(f"- Tổng số bản ghi: {total_records}")
             print(f"- Số bất thường phát hiện: {anomaly_count} ({anomaly_count/total_records*100:.2f}%)")
         
@@ -155,8 +154,7 @@ KẾT QUẢ PHÁT HIỆN BẤT THƯỜNG:")
             # Hiển thị top bất thường
             max_display = min(5, len(anomalies))
             if verbose and max_display > 0:
-                print(f"
-Top {max_display} hoạt động bất thường:")
+                print(f"Top {max_display} hoạt động bất thường:")
                 print(anomalies[display_cols].head(max_display).to_string())
         
         return new_data

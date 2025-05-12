@@ -6,3 +6,4 @@ joblib
 matplotlib 
 seaborn
 flask
+imbalanced-learn

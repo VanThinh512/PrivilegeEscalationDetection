@@ -1,0 +1,18 @@
+2025-05-12 16:54:50,178 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 16:54:50,179 - INFO - Khởi động web server tại port 5000
+2025-05-12 16:54:50,192 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 16:54:50,192 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 16:54:50,192 - INFO -  * Restarting with stat
+2025-05-12 16:54:51,033 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 16:54:51,033 - INFO - Khởi động web server tại port 5000
+2025-05-12 16:54:51,039 - WARNING -  * Debugger is active!
+2025-05-12 16:54:51,045 - INFO -  * Debugger PIN: 406-934-973
+2025-05-12 16:54:54,326 - INFO - 127.0.0.1 - - [12/May/2025 16:54:54] "GET / HTTP/1.1" 200 -
+2025-05-12 16:54:54,499 - INFO - 127.0.0.1 - - [12/May/2025 16:54:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-12 16:54:59,468 - INFO - 127.0.0.1 - - [12/May/2025 16:54:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 16:55:04,468 - INFO - 127.0.0.1 - - [12/May/2025 16:55:04] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 16:55:08,082 - INFO - Đang phân tích lệnh: nano test.txt
+2025-05-12 16:55:08,082 - INFO - Lệnh 'nano test.txt' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 16:55:08,083 - INFO - 127.0.0.1 - - [12/May/2025 16:55:08] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 16:55:09,468 - INFO - 127.0.0.1 - - [12/May/2025 16:55:09] "GET /api/alerts HTTP/1.1" 200 -
