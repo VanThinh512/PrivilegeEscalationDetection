@@ -1,0 +1,26 @@
+[
+    {
+        "timestamp": "2025-05-12 14:35:40",
+        "metrics": {
+            "accuracy": 0.4222222222222222,
+            "precision": 0.4222222222222222,
+            "recall": 1.0,
+            "f1": 0.59375,
+            "auc": 0.6514844804318489
+        },
+        "drift_detected": false,
+        "drift_details": {}
+    },
+    {
+        "timestamp": "2025-05-12 14:40:46",
+        "metrics": {
+            "accuracy": 0.4222222222222222,
+            "precision": 0.4222222222222222,
+            "recall": 1.0,
+            "f1": 0.59375,
+            "auc": 0.6514844804318489
+        },
+        "drift_detected": false,
+        "drift_details": {}
+    }
+]

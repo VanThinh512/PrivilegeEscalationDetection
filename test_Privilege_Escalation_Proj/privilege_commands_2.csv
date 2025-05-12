@@ -1,0 +1,272 @@
+timestamp;user;command;args;key
+06/04/2025 11:10;frank;sudo;sudo service nginx restart;sudo_exec
+06/04/2025 9:45;joe;find;"find /home -name ""report.docx""";find_exec
+06/04/2025 14:35;root;sudo;sudo cat /var/log/syslog;sudo_exec
+06/04/2025 15:42;joe;gcc;gcc --version;gcc_exec
+06/04/2025 13:13;user04;vim;vim fileprj1.c;vim_exec
+06/04/2025 11:19;hannah;vim;vim fileprj2.txt;vim_exec
+06/04/2025 14:46;user26;vim;vim fileprj3.txt;vim_exec
+06/04/2025 9:28;grace;vim;vim fileprj4.txt;vim_exec
+06/04/2025 10:15;user18;vim;vim fileprj5.txt;vim_exec
+06/04/2025 15:16;user30;vim;vim fileprj6.txt;vim_exec
+06/04/2025 16:21;ian;vim;vim fileprj7.txt;vim_exec
+06/04/2025 19:43;joe;su;su - user01;su_exec
+06/04/2025 19:43;user01;gcc;gcc --version;gcc_exec
+06/04/2025 19:43;user01;sudo;sudo ls;sudo_exec
+06/04/2025 19:44;joe;sudo;sudo -i;sudo_exec
+06/04/2025 19:44;root;gcc;gcc --version;gcc_exec
+06/04/2025 19:44;root;find;find / -name passwd -type f;find_exec
+07/04/2025 19:12;joe;sudo;sudo -i;sudo_exec
+18/04/2025 19:07;joe;gcc;gcc vuln.c -o vuln;gcc_exec
+18/04/2025 19:08;joe;chmod;chmod 777 vuln;chmod_exec
+18/04/2025 19:09;joe;sudo;sudo chown root:root vuln;sudo_exec
+18/04/2025 19:09;joe;sudo;sudo chmod 777 vuln;sudo_exec
+18/04/2025 19:10;joe;sudo;sudo chmod u+s vuln;sudo_exec
+18/04/2025 19:11;joe;sudo;sudo chmod u+s vuln;sudo_exec
+18/04/2025 19:11;joe;gcc;gcc vuln.c -o vuln;gcc_exec
+18/04/2025 19:12;joe;sudo;sudo chmod u+s vuln;sudo_exec
+18/04/2025 19:12;joe;sudo;sudo chown root:root vuln;sudo_exec
+18/04/2025 16:13;joe;sudo;sudo ls;sudo_exec
+18/04/2025 16:13;joe;gcc;gcc --version;gcc_exec
+26/02/2025 19:32;user03;gcc;gcc --version;gcc_exec
+26/02/2025 19:35;user03;sudo;sudo -l;sudo_exec
+26/02/2025 19:36;user03;sudo;sudo ls -la;sudo_exec
+26/02/2025 19:38;user03;vim;vim vuln.c;vim_exec
+26/02/2025 19:38;user03;gcc;gcc vuln.c -o vuln;gcc_exec
+26/02/2025 19:39;user03;sudo;sudo chown root:root vuln;sudo_exec
+26/02/2025 19:39;user03;sudo;sudo chmod u+s vuln;sudo_exec
+03/04/2025 11:10;user15;sudo;sudo service nginx restart;sudo_exec
+03/04/2025 9:45;user23;find;"find /home -name ""report.docx""";find_exec
+03/04/2025 14:35;jack;sudo;sudo cat /var/log/syslog;sudo_exec
+03/04/2025 15:42;user07;gcc;gcc --version;gcc_exec
+03/04/2025 13:13;user04;vim;vim fileprj1.c;vim_exec
+03/04/2025 11:19;hannah;vim;vim fileprj2.txt;vim_exec
+03/04/2025 14:46;user26;vim;vim fileprj3.txt;vim_exec
+03/04/2025 9:28;grace;vim;vim fileprj4.txt;vim_exec
+03/04/2025 10:15;user18;vim;vim fileprj5.txt;vim_exec
+03/04/2025 15:16;user30;vim;vim fileprj6.txt;vim_exec
+03/04/2025 16:21;ian;vim;vim fileprj7.txt;vim_exec
+03/04/2025 20:12;eva;vim;vim vuln.c;vim_exec
+03/04/2025 20:13;eva;vim;vim vuln.c;vim_exec
+03/04/2025 20:14;eva;gcc;gcc vuln.c -o vuln;gcc_exec
+03/04/2025 20:15;eva;sudo;sudo chown root:root vuln;sudo_exec
+03/04/2025 20:15;eva;sudo;sudo chmod u+s vuln;sudo_exec
+21/04/2025 16:34;user03;su;su joe;su_exec
+21/04/2025 16:51;joe;sudo;sudo date -s 2025-04-04 18:28:00;sudo_exec
+04/04/2025 18:34;joe;ip;ip a;ip_exec
+04/04/2025 18:35;joe;ip;ip a;ip_exec
+04/04/2025 18:35;joe;python3;python3 --version;python3_exec
+04/04/2025 18:35;joe;sudo;sudo -l;sudo_exec
+04/04/2025 18:36;joe;su;su user03;su_exec
+04/04/2025 18:36;user03;python3;python3 --version;python3_exec
+04/04/2025 18:36;user03;chmod;chmod +x vuln.c;chmod_exec
+06/04/2025 12:10;user27;sudo;sudo service nginx restart;sudo_exec
+06/04/2025 9:12;eva;find;"find /home -name ""report.docx""";find_exec
+06/04/2025 14:35;root;sudo;sudo cat /var/log/syslog;sudo_exec
+06/04/2025 15:42;joe;gcc;gcc --version;gcc_exec
+06/04/2025 13:13;user04;vim;vim fileprj1.c;vim_exec
+06/04/2025 11:19;user29;vim;vim fileprj2.txt;vim_exec
+06/04/2025 15:12;user26;vim;vim fileprj3.txt;vim_exec
+06/04/2025 9:28;grace;vim;vim fileprj4.txt;vim_exec
+06/04/2025 10:15;user18;vim;vim fileprj5.txt;vim_exec
+06/04/2025 15:16;user30;vim;vim fileprj6.txt;vim_exec
+06/04/2025 16:21;ian;vim;vim fileprj7.txt;vim_exec
+17/03/2025 9:15;user27;sudo;sudo apt update;sudo_exec
+17/03/2025 15:20;user27;sudo;sudo apt install htop;sudo_exec
+17/03/2025 11:10;user1;sudo;sudo service nginx restart;sudo_exec
+17/03/2025 14:35;root2;sudo;sudo cat /var/log/syslog;sudo_exec
+17/03/2025 15:40;david;sudo;sudo systemctl status apache2;sudo_exec
+17/03/2025 21:12;root;sudo;sudo -l;sudo_exec
+17/03/2025 21:13;david;sudo;sudo -l;sudo_exec
+17/03/2025 21:13;david;find;find / -perm -04000 -type f;find_exec
+17/03/2025 21:13;david;sudo;sudo -i;sudo_exec
+17/03/2025 21:14;david;sudo;sudo /bin/bash;sudo_exec
+17/03/2025 21:14;root;id;id ;id_exec
+17/03/2025 21:17;joe;su;su david;su_exec
+17/03/2025 21:20;david;vim;vim pwnkit.c;vim_exec
+17/03/2025 21:20;david;gcc;gcc pwnkit.c -o pwnkit;gcc_exec
+17/03/2025 21:23;david;vim;vim pwnkit.c;vim_exec
+17/03/2025 21:24;david;gcc;gcc pwnkit.c -o pwnkit;gcc_exec
+17/03/2025 21:30;david;python3;python3 --version;python3_exec
+17/03/2025 21:32;david;nano;nano wrapper.c;nano_exec
+17/03/2025 21:33;david;gcc;gcc wrapper.c -o wrapper;gcc_exec
+17/03/2025 21:33;david;chmod;chmod 4755 wrapper;chmod_exec
+17/03/2025 21:33;david;id;id ;id_exec
+17/03/2025 21:35;david;chown;chown root:root wrapper;chown_exec
+17/03/2025 21:35;david;sudo;sudo chown root:root wrapper;sudo_exec
+17/03/2025 21:37;david;find;find / -perm -4000 -type f;find_exec
+17/03/2025 21:41;david;gcc;gcc rootbash.c -o rootbash;gcc_exec
+17/03/2025 21:41;david;sudo;sudo chown root:root rootbash;sudo_exec
+17/03/2025 21:41;david;sudo;sudo chmod 4755 rootbash;sudo_exec
+17/03/2025 21:42;david;id;id ;id_exec
+17/03/2025 21:46;david;sudo;sudo find / -user root -perm -4000;sudo_exec
+17/03/2025 21:48;david;nano;nano ./rootbash;nano_exec
+17/03/2025 21:48;david;nano;nano ./rootbash.c;nano_exec
+17/03/2025 21:49;david;gcc;gcc rootbash.c -o roobash;gcc_exec
+17/03/2025 21:50;david;sudo;sudo chown root:root rootbash;sudo_exec
+17/03/2025 21:50;david;sudo;sudo chown root:root roobash;sudo_exec
+17/03/2025 21:50;david;sudo;sudo chmod 4755 roobash;sudo_exec
+17/03/2025 21:52;david;nano;nano /usr/local/bin/vuln.sh;nano_exec
+17/03/2025 21:53;david;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+17/03/2025 21:53;david;chmod;chmod +x vuln.sh;chmod_exec
+17/03/2025 21:54;david;chmod;chmod +x /usr/local/bin/vuln.sh;chmod_exec
+17/03/2025 21:54;david;nano;nano ;nano_exec
+17/03/2025 21:54;david;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+17/03/2025 21:55;david;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+17/03/2025 21:55;david;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+17/03/2025 21:59;david;gcc;gcc rootbash.c -o rootbash;gcc_exec
+17/03/2025 21:59;david;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+17/03/2025 22:02;david;sudo;sudo chown root:root rootbash;sudo_exec
+17/03/2025 22:02;david;sudo;sudo chmod 4755 rootbash;sudo_exec
+17/03/2025 22:02;david;id;id ;id_exec
+17/03/2025 22:05;david;getcap;getcap -r /;getcap_exec
+17/03/2025 22:07;david;find;find / -type f ( -name *.conf -o -name *.ini -o -name *.json -o -name *.yml -o -name *.yaml ) -writable;find_exec
+17/03/2025 22:08;david;find;find / -type f -perm -0002 -name *.conf;find_exec
+17/03/2025 22:08;david;find;find /etc -type f -writable;find_exec
+17/03/2025 22:09;david;find;find / -type f -writable;find_exec
+28/02/2025 19:41;user25;sudo;sudo -l;sudo_exec
+28/02/2025 19:42;user25;sudo;sudo -i;sudo_exec
+28/02/2025 19:42;user25;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+28/02/2025 19:42;user25;sudo;sudo /usr/local/bin/vuln.sh;sudo_exec
+28/02/2025 19:43;user25;sudo;sudo cat /etc/crontab;sudo_exec
+28/02/2025 19:43;user25;getcap;getcap -r /;getcap_exec
+01/03/2025 12:10;user12;sudo;sudo service nginx restart;sudo_exec
+01/03/2025 9:12;david;find;"find /home -name ""report.docx""";find_exec
+01/03/2025 14:35;ian;sudo;sudo cat /var/log/syslog;sudo_exec
+01/03/2025 11:42;user05;gcc;gcc --version;gcc_exec
+01/03/2025 9:13;user09;vim;vim fileprj1.c;vim_exec
+01/03/2025 11:19;user19;vim;vim fileprj2.txt;vim_exec
+01/03/2025 11:12;user20;vim;vim fileprj3.txt;vim_exec
+01/03/2025 9:28;jack;vim;vim fileprj4.txt;vim_exec
+01/03/2025 10:15;user21;vim;vim fileprj5.txt;vim_exec
+01/03/2025 14:16;user11;nano;nano fileprj6.txt;nano_exec
+01/03/2025 16:21;joe;nano;nano fileprj7.txt;nano_exec
+01/03/2025 9:15;user20;sudo;sudo apt update;sudo_exec
+01/03/2025 10:20;user20;sudo;sudo apt install htop;sudo_exec
+01/03/2025 11:10;user1;sudo;sudo service nginx restart;sudo_exec
+01/03/2025 14:35;root2;sudo;sudo cat /var/log/syslog;sudo_exec
+01/03/2025 15:40;david;sudo;sudo systemctl status apache2;sudo_exec
+01/03/2025 10:20;joe;sudo;sudo apt install htop;sudo_exec
+01/03/2025 10:50;user03;find;"find /var/www -type f -name ""*.php""";find_exec
+01/03/2025 14:23;david;vim;vim project01.txt;vim_exec
+01/03/2025 23:47;user19;sudo;sudo /usr/bin/mount -o loop /tmp/exploit.img /tmp/loopmnt;sudo_exec
+01/03/2025 15:48;user19;sudo;sudo cp /bin/bash /tmp/loopmnt/rootbash;sudo_exec
+01/03/2025 15:49;user19;chmod;chmod +s /tmp/loopmnt/rootbash;chmod_exec
+01/03/2025 15:50;user19;sudo;sudo /usr/bin/umount /tmp/loopmnt;sudo_exec
+01/03/2025 15:52;user19;sudo;sudo /usr/bin/mount -o loop /tmp/exploit.img /tmp/loopmnt;sudo_exec
+04/03/2025 0:35;user14;nano;nano rootbash.c;nano_exec
+04/03/2025 0:36;user14;gcc;gcc rootbash.c -o rootbash;gcc_exec
+04/03/2025 0:36;user14;sudo;sudo chown root:root rootbash;sudo_exec
+04/03/2025 0:40;user14;sudo;sudo chmod 4755 rootbash;sudo_exec
+04/03/2025 0:41;user14;nano;nano /usr/local/bin/vuln.sh;nano_exec
+04/03/2025 0:42;user14;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+04/03/2025 0:42;user14;chmod;chmod +x /usr/local/bin/vuln.sh;chmod_exec
+04/03/2025 0:42;user14;sudo;sudo /usr/local/bin/vuln.sh;sudo_exec
+04/03/2025 0:43;root;id;id ;id_exec
+05/03/2025 9:45;hannah;"find /home -name ""report.docx""";find_exec;
+05/03/2025 10:05;joe;chmod;chmod 644 document.txt;chmod_exec
+05/03/2025 20:58;hannah;nano;nano vuln.c;nano_exec
+05/03/2025 20:59;hannah;gcc;gcc vuln.c -o vuln;gcc_exec
+05/03/2025 21:00;hannah;sudo;sudo chown root:root vuln;sudo_exec
+05/03/2025 21:00;hannah;sudo;sudo chmod 777 vuln;sudo_exec
+05/03/2025 21:01;hannah;nano;nano vuln.c;nano_exec
+05/03/2025 21:02;hannah;gcc;gcc vuln.c -o vuln;gcc_exec
+05/03/2025 21:02;hannah;sudo;sudo chown root:root vuln;sudo_exec
+05/03/2025 21:02;hannah;sudo;sudo chmod 777 vuln;sudo_exec
+05/03/2025 21:02;hannah;id;id ;id_exec
+24/04/2025 8:32;user05;sudo;sudo date -s 2025-03-06 1:26:00;sudo_exec
+06/03/2025 14:15;root;find;find /usr/local/bin -executable;find_exec
+06/03/2025 1:29;user05;sudo;sudo -i;sudo_exec
+06/03/2025 1:30;user05;sudo;sudo /bin/bash;sudo_exec
+06/03/2025 1:31;user05;nano;nano pwnkit.c;nano_exec
+06/03/2025 1:32;user05;gcc;gcc pwnkit.c -o pwnkit;gcc_exec
+06/03/2025 1:34;user05;find;find pwn.so;find_exec
+06/03/2025 1:36;user05;find;find / -type f -ls;find_exec
+06/03/2025 1:37;user05;find;find / -type f .so -ls;find_exec
+06/03/2025 1:37;user05;find;find / -type f pwn.so -ls;find_exec
+06/03/2025 1:38;user05;nano;nano rootbash.c;nano_exec
+06/03/2025 1:39;user05;gcc;gcc rootbash.c -o rootbash;gcc_exec
+06/03/2025 1:39;user05;sudo;sudo chmod 4755 rootbash;sudo_exec
+06/03/2025 1:40;user05;sudo;sudo chown root:root rootbash;sudo_exec
+06/03/2025 1:49;user10;sudo;sudo date -s 2025-03-07 00:15:00;sudo_exec
+07/03/2025 10:10;frank;sudo;sudo service nginx restart;sudo_exec
+07/03/2025 13:45;joe;find;"find /home -name ""report.docx""";find_exec
+07/03/2025 14:35;root;sudo;sudo cat /var/log/syslog;sudo_exec
+07/03/2025 9:42;joe;gcc;gcc --version;gcc_exec
+07/03/2025 10:13;user04;vim;vim fileprj1.c;vim_exec
+07/03/2025 9:19;user16;vim;vim fileprj2.txt;vim_exec
+07/03/2025 9:46;user27;vim;vim fileprj3.txt;vim_exec
+07/03/2025 9:28;jack;vim;vim fileprj4.txt;vim_exec
+07/03/2025 15:15;user24;vim;vim fileprj5.txt;vim_exec
+07/03/2025 15:16;user11;vim;vim fileprj6.txt;vim_exec
+07/03/2025 14:21;user12;vim;vim fileprj7.txt;vim_exec
+07/03/2025 11:40;user01;chmod;chmod +x script.sh;chmod_exec
+07/03/2025 0:15;user10;sudo;sudo ls;sudo_exec
+07/03/2025 0:16;user10;gcc;gcc --version;gcc_exec
+07/03/2025 0:16;user10;python3;python3 --version;python3_exec
+07/03/2025 0:20;user10;getcap;getcap -r /;getcap_exec
+07/03/2025 0:21;user10;ifconfig;ifconfig ;ifconfig_exec
+07/03/2025 0:21;user10;nano;nano rootbash1.c;nano_exec
+07/03/2025 0:23;user10;gcc;gcc rootbash1.c -o rootbash1;gcc_exec
+07/03/2025 0:24;user10;sudo;sudo chmod 4755 rootbash1;sudo_exec
+07/03/2025 0:24;user10;sudo;sudo chown root:root rootbash1;sudo_exec
+07/03/2025 0:25;user10;sudo;sudo nano usr/local/bin/vuln.sh;sudo_exec
+07/03/2025 0:26;user10;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+07/03/2025 0:26;user10;sudo;sudo nano /usr/local/bin/vuln.sh;sudo_exec
+07/03/2025 0:27;user10;sudo;sudo chmod +x /usr/local/bin/vuln.sh;sudo_exec
+07/03/2025 0:28;user10;sudo;sudo /usr/local/bin/vuln.sh;sudo_exec
+07/03/2025 3:30;frank;gcc;gcc --version;gcc_exec
+07/03/2025 3:33;frank;python3;python3 --versio;python3_exec
+07/03/2025 3:42;frank;find;find / -user root -perm -4000;find_exec
+25/04/2025 14:55;root;su;su user06;su_exec
+25/04/2025 14:55;root;su;su user06;su_exec
+25/04/2025 14:58;user06;sudo;sudo date -s 2025-03-10 2:48:00;sudo_exec
+10/03/2025 12:10;user12;sudo;sudo service nginx restart;sudo_exec
+10/03/2025 9:12;david;find;"find /home -name ""report.docx""";find_exec
+10/03/2025 14:35;ian;sudo;sudo cat /var/log/syslog;sudo_exec
+10/03/2025 11:42;user05;gcc;gcc --version;gcc_exec
+10/03/2025 9:13;user09;vim;vim fileprj1.c;vim_exec
+10/03/2025 11:19;user19;vim;vim fileprj2.txt;vim_exec
+10/03/2025 11:12;user20;vim;vim fileprj3.txt;vim_exec
+10/03/2025 9:28;jack;vim;vim fileprj4.txt;vim_exec
+10/03/2025 10:15;user21;vim;vim fileprj5.txt;vim_exec
+10/03/2025 14:16;user11;nano;nano fileprj6.txt;nano_exec
+10/03/2025 16:21;joe;nano;nano fileprj7.txt;nano_exec
+10/03/2025 9:15;user20;sudo;sudo apt update;sudo_exec
+10/03/2025 10:20;user20;sudo;sudo apt install htop;sudo_exec
+10/03/2025 11:10;user1;sudo;sudo service nginx restart;sudo_exec
+10/03/2025 14:35;root2;sudo;sudo cat /var/log/syslog;sudo_exec
+10/03/2025 15:40;david;sudo;sudo systemctl status apache2;sudo_exec
+10/03/2025 10:20;joe;sudo;sudo apt install htop;sudo_exec
+10/03/2025 2:48;user06;sudo;sudo -l;sudo_exec
+10/03/2025 2:56;user06;find;find /root -type f -writable;find_exec
+10/03/2025 3:05;user06;sudo;sudo systemctl enable debug-shell.service;sudo_exec
+10/03/2025 3:10;user06;sudo;sudo systemctl start debug-shell.service;sudo_exec
+10/03/2025 3:52;root;su;su user07;su_exec
+10/03/2025 3:53;user07;sudo;sudo date -s 2025-03-11 00:03:00;sudo_exec
+11/03/2025 0:03;user07;gcc;gcc --version;gcc_exec
+11/03/2025 0:07;user07;getcap;getcap /usr/bin/python3;getcap_exec
+11/03/2025 0:08;user07;sudo;sudo cat /etc/sudoers;sudo_exec
+11/03/2025 0:09;user07;sudo;sudo setcap cap_setuid+ep /usr/bin/python3;sudo_exec
+13/03/2025 12:10;user12;sudo;sudo service nginx restart;sudo_exec
+13/03/2025 9:12;david;find;"find /home -name ""report.docx""";find_exec
+13/03/2025 14:35;ian;sudo;sudo cat /var/log/syslog;sudo_exec
+13/03/2025 11:42;user05;gcc;gcc --version;gcc_exec
+13/03/2025 9:13;user09;vim;vim fileprj1.c;vim_exec
+13/03/2025 11:19;user19;vim;vim fileprj2.txt;vim_exec
+13/03/2025 11:12;user20;vim;vim fileprj3.txt;vim_exec
+13/03/2025 9:28;jack;vim;vim fileprj4.txt;vim_exec
+13/03/2025 10:15;user21;vim;vim fileprj5.txt;vim_exec
+13/03/2025 14:16;user11;nano;nano fileprj6.txt;nano_exec
+13/03/2025 16:21;joe;nano;nano fileprj7.txt;nano_exec
+13/03/2025 9:15;user20;sudo;sudo apt update;sudo_exec
+13/03/2025 10:20;user20;sudo;sudo apt install htop;sudo_exec
+13/03/2025 15:40;root;sudo;sudo systemctl status apache2;sudo_exec
+13/03/2025 2:19;user11;gcc;gcc --version;gcc_exec
+13/03/2025 2:42;user11;sudo;sudo -l;sudo_exec
+13/03/2025 2:42;user11;sudo;sudo ls -la;sudo_exec
+13/03/2025 2:44;user11;vim;vim vuln.c;vim_exec
+13/03/2025 3:13;user11;gcc;gcc vuln.c -o vuln;gcc_exec
+13/03/2025 3:13;user11;sudo;sudo chown root:root vuln;sudo_exec
+13/03/2025 3:17;user11;sudo;sudo chmod u+s vuln;sudo_exec
+27/04/2025 18:58;joe;sudo;sudo apt install git;sudo_exec

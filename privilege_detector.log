@@ -1,0 +1,828 @@
+2025-05-12 14:51:23,632 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 14:51:23,633 - INFO - Khởi động web server tại port 5000
+2025-05-12 14:51:23,644 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 14:51:23,644 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 14:51:23,645 - INFO -  * Restarting with stat
+2025-05-12 14:51:24,699 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 14:51:24,699 - INFO - Khởi động web server tại port 5000
+2025-05-12 14:51:24,704 - WARNING -  * Debugger is active!
+2025-05-12 14:51:24,844 - INFO -  * Debugger PIN: 922-311-522
+2025-05-12 14:52:01,935 - INFO - 127.0.0.1 - - [12/May/2025 14:52:01] "GET / HTTP/1.1" 200 -
+2025-05-12 14:52:02,247 - INFO - 127.0.0.1 - - [12/May/2025 14:52:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-12 14:52:06,972 - INFO - 127.0.0.1 - - [12/May/2025 14:52:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:11,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:16,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:21,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:26,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:31,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:33,287 - INFO - 127.0.0.1 - - [12/May/2025 14:52:33] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 14:52:36,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:41,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:46,972 - INFO - 127.0.0.1 - - [12/May/2025 14:52:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:50,590 - INFO - 127.0.0.1 - - [12/May/2025 14:52:50] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 14:52:51,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:52:56,973 - INFO - 127.0.0.1 - - [12/May/2025 14:52:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:01,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:05,822 - INFO - 127.0.0.1 - - [12/May/2025 14:53:05] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 14:53:06,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:11,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:16,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:21,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:22,389 - INFO - 127.0.0.1 - - [12/May/2025 14:53:22] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 14:53:26,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:31,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:36,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:41,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:46,054 - INFO - 127.0.0.1 - - [12/May/2025 14:53:46] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 14:53:46,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:51,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:53:56,973 - INFO - 127.0.0.1 - - [12/May/2025 14:53:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:01,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:06,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:11,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:16,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:21,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:26,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:31,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:36,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:41,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:46,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:51,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:54:56,973 - INFO - 127.0.0.1 - - [12/May/2025 14:54:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:01,973 - INFO - 127.0.0.1 - - [12/May/2025 14:55:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:06,974 - INFO - 127.0.0.1 - - [12/May/2025 14:55:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:11,973 - INFO - 127.0.0.1 - - [12/May/2025 14:55:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:16,973 - INFO - 127.0.0.1 - - [12/May/2025 14:55:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:21,973 - INFO - 127.0.0.1 - - [12/May/2025 14:55:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:26,973 - INFO - 127.0.0.1 - - [12/May/2025 14:55:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:31,974 - INFO - 127.0.0.1 - - [12/May/2025 14:55:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:36,974 - INFO - 127.0.0.1 - - [12/May/2025 14:55:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:41,973 - INFO - 127.0.0.1 - - [12/May/2025 14:55:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:46,973 - INFO - 127.0.0.1 - - [12/May/2025 14:55:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:50,329 - INFO - 127.0.0.1 - - [12/May/2025 14:55:50] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 14:55:51,973 - INFO - 127.0.0.1 - - [12/May/2025 14:55:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:55:56,972 - INFO - 127.0.0.1 - - [12/May/2025 14:55:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:56:01,973 - INFO - 127.0.0.1 - - [12/May/2025 14:56:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:56:06,973 - INFO - 127.0.0.1 - - [12/May/2025 14:56:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:56:11,973 - INFO - 127.0.0.1 - - [12/May/2025 14:56:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:56:16,977 - INFO - 127.0.0.1 - - [12/May/2025 14:56:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:57:57,813 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 14:57:57,814 - INFO - Bắt đầu giám sát lịch sử lệnh. Nhấn Ctrl+C để dừng.
+2025-05-12 14:57:57,857 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo touch /etc/default/google-chrome
+2025-05-12 14:57:57,857 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:57,858 - WARNING - Chi tiết: {'command': 'sudo touch /etc/default/google-chrome', 'user': 'joe', 'timestamp': '2025-05-12 14:57:57', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:57,900 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: su root
+2025-05-12 14:57:57,901 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:57,902 - WARNING - Chi tiết: {'command': 'su root', 'user': 'joe', 'timestamp': '2025-05-12 14:57:57', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:57,955 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo psswd root
+2025-05-12 14:57:57,955 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:57,955 - WARNING - Chi tiết: {'command': 'sudo psswd root', 'user': 'joe', 'timestamp': '2025-05-12 14:57:57', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,004 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo passwd root
+2025-05-12 14:57:58,006 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,006 - WARNING - Chi tiết: {'command': 'sudo passwd root', 'user': 'joe', 'timestamp': '2025-05-12 14:57:57', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:57:58,073 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: su root
+2025-05-12 14:57:58,074 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,074 - WARNING - Chi tiết: {'command': 'su root', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:57:58,121 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo touch /etc/default/google-chrome
+2025-05-12 14:57:58,124 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,124 - WARNING - Chi tiết: {'command': 'sudo touch /etc/default/google-chrome', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:57:58,168 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: python -v
+2025-05-12 14:57:58,169 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,169 - WARNING - Chi tiết: {'command': 'python -v', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,238 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt install python3
+2025-05-12 14:57:58,238 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,239 - WARNING - Chi tiết: {'command': 'sudo apt install python3', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:57:58,286 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt install python3-pip
+2025-05-12 14:57:58,287 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,287 - WARNING - Chi tiết: {'command': 'sudo apt install python3-pip', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:57:58,333 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt update && sudo apt upgrade
+2025-05-12 14:57:58,334 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,334 - WARNING - Chi tiết: {'command': 'sudo apt update && sudo apt upgrade', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:57:58,377 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt install python3-venv
+2025-05-12 14:57:58,378 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,379 - WARNING - Chi tiết: {'command': 'sudo apt install python3-venv', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:57:58,423 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: mkdir python_Prj
+2025-05-12 14:57:58,424 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,424 - WARNING - Chi tiết: {'command': 'mkdir python_Prj', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,467 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pwd
+2025-05-12 14:57:58,468 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,469 - WARNING - Chi tiết: {'command': 'pwd', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,501 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: rmdir python_Prj
+2025-05-12 14:57:58,502 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,502 - WARNING - Chi tiết: {'command': 'rmdir python_Prj', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,545 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:58,546 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,546 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,596 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ~
+2025-05-12 14:57:58,596 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,597 - WARNING - Chi tiết: {'command': 'cd ~', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,640 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:58,641 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,642 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,686 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pwd
+2025-05-12 14:57:58,686 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,687 - WARNING - Chi tiết: {'command': 'pwd', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,733 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: mkdir python_Proj
+2025-05-12 14:57:58,733 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,734 - WARNING - Chi tiết: {'command': 'mkdir python_Proj', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:58,782 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd python_Proj/
+2025-05-12 14:57:58,782 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,783 - WARNING - Chi tiết: {'command': 'cd python_Proj/', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:58,821 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:58,821 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,821 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:58,863 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: python3 -m venv my_VEnv
+2025-05-12 14:57:58,864 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,864 - WARNING - Chi tiết: {'command': 'python3 -m venv my_VEnv', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:58,906 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:58,908 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,908 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:58,953 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd my_VEnv/
+2025-05-12 14:57:58,954 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:58,954 - WARNING - Chi tiết: {'command': 'cd my_VEnv/', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,000 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:59,000 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,000 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:58', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,046 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd bin
+2025-05-12 14:57:59,046 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,047 - WARNING - Chi tiết: {'command': 'cd bin', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,093 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:59,094 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,094 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,141 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ..
+2025-05-12 14:57:59,142 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,142 - WARNING - Chi tiết: {'command': 'cd ..', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,184 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:59,184 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,184 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,229 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ..
+2025-05-12 14:57:59,230 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,230 - WARNING - Chi tiết: {'command': 'cd ..', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,281 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: source my_VEnv/bin/activate
+2025-05-12 14:57:59,282 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,282 - WARNING - Chi tiết: {'command': 'source my_VEnv/bin/activate', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,391 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pip install flask scikit-learn pandas numpy matplotlib seaborn
+2025-05-12 14:57:59,392 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,392 - WARNING - Chi tiết: {'command': 'pip install flask scikit-learn pandas numpy matplotlib seaborn', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,415 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pip install jupyter
+2025-05-12 14:57:59,415 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,416 - WARNING - Chi tiết: {'command': 'pip install jupyter', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,459 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt update
+2025-05-12 14:57:59,460 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,460 - WARNING - Chi tiết: {'command': 'sudo apt update', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,504 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt install open-vm-tools open-vm-tools-desktop -y
+2025-05-12 14:57:59,504 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,505 - WARNING - Chi tiết: {'command': 'sudo apt install open-vm-tools open-vm-tools-desktop -y', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,547 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd /mnt/hgfs
+2025-05-12 14:57:59,548 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,548 - WARNING - Chi tiết: {'command': 'cd /mnt/hgfs', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,578 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd /mnt
+2025-05-12 14:57:59,579 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,579 - WARNING - Chi tiết: {'command': 'cd /mnt', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,619 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:59,619 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,620 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:57:59,660 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo mkdir -p hgfs
+2025-05-12 14:57:59,660 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,661 - WARNING - Chi tiết: {'command': 'sudo mkdir -p hgfs', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,705 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:59,706 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,706 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,748 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd hgfs
+2025-05-12 14:57:59,750 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,750 - WARNING - Chi tiết: {'command': 'cd hgfs', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,794 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:57:59,794 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,795 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,830 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ~
+2025-05-12 14:57:59,831 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,831 - WARNING - Chi tiết: {'command': 'cd ~', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,872 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pwd
+2025-05-12 14:57:59,872 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,873 - WARNING - Chi tiết: {'command': 'pwd', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,916 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+2025-05-12 14:57:59,917 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,917 - WARNING - Chi tiết: {'command': 'sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:57:59,958 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls /mnt/hgfs
+2025-05-12 14:57:59,959 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:57:59,959 - WARNING - Chi tiết: {'command': 'ls /mnt/hgfs', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,003 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls /mnt/hgfs/KaggleData
+2025-05-12 14:58:00,004 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,005 - WARNING - Chi tiết: {'command': 'ls /mnt/hgfs/KaggleData', 'user': 'joe', 'timestamp': '2025-05-12 14:57:59', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,047 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd python_Proj/
+2025-05-12 14:58:00,048 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,049 - WARNING - Chi tiết: {'command': 'cd python_Proj/', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,091 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: source my_VEnv/bin/activate
+2025-05-12 14:58:00,092 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,093 - WARNING - Chi tiết: {'command': 'source my_VEnv/bin/activate', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,125 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pip install dask
+2025-05-12 14:58:00,125 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,125 - WARNING - Chi tiết: {'command': 'pip install dask', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,169 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pip install pyarrow
+2025-05-12 14:58:00,170 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,170 - WARNING - Chi tiết: {'command': 'pip install pyarrow', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,200 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:00,201 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,201 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,244 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: mkdir privilege_Escalation_Detection_Proj
+2025-05-12 14:58:00,244 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,244 - WARNING - Chi tiết: {'command': 'mkdir privilege_Escalation_Detection_Proj', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,272 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd privilege_Escalation_Detection_Proj/
+2025-05-12 14:58:00,272 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,272 - WARNING - Chi tiết: {'command': 'cd privilege_Escalation_Detection_Proj/', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,316 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: touch preprocess.py feature_Engineering.py train_Model.py evaluate_Model.py predict.py
+2025-05-12 14:58:00,317 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,317 - WARNING - Chi tiết: {'command': 'touch preprocess.py feature_Engineering.py train_Model.py evaluate_Model.py predict.py', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,360 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:00,361 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,362 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,390 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: /bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt
+2025-05-12 14:58:00,390 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,390 - WARNING - Chi tiết: {'command': '/bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,421 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd Do
+2025-05-12 14:58:00,421 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,421 - WARNING - Chi tiết: {'command': 'cd Do', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,465 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd Downloads/
+2025-05-12 14:58:00,465 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,466 - WARNING - Chi tiết: {'command': 'cd Downloads/', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,512 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:00,514 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,514 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,564 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: chmod +x Cursor-0.46.11-ae378be9dc2f5f1a6a1a220c6e25f9f03c8d4e19.deb.glibc2.25-x86_64.AppImage
+2025-05-12 14:58:00,564 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,564 - WARNING - Chi tiết: {'command': 'chmod +x Cursor-0.46.11-ae378be9dc2f5f1a6a1a220c6e25f9f03c8d4e19.deb.glibc2.25-x86_64.AppImage', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,614 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:00,614 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,614 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,660 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo mv Cursor-0.46.11-ae378be9dc2f5f1a6a1a220c6e25f9f03c8d4e19.deb.glibc2.25-x86_64.AppImage /opt/cursor.image
+2025-05-12 14:58:00,661 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,661 - WARNING - Chi tiết: {'command': 'sudo mv Cursor-0.46.11-ae378be9dc2f5f1a6a1a220c6e25f9f03c8d4e19.deb.glibc2.25-x86_64.AppImage /opt/cursor.image', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:00,694 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd /opt
+2025-05-12 14:58:00,695 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,696 - WARNING - Chi tiết: {'command': 'cd /opt', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,725 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:00,725 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,725 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,764 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ./cursor.image
+2025-05-12 14:58:00,765 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,765 - WARNING - Chi tiết: {'command': './cursor.image', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,808 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls /tmp
+2025-05-12 14:58:00,809 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,810 - WARNING - Chi tiết: {'command': 'ls /tmp', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,852 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: lsb_release -d
+2025-05-12 14:58:00,853 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,854 - WARNING - Chi tiết: {'command': 'lsb_release -d', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:00,899 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo add-apt-repository universe
+2025-05-12 14:58:00,900 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,900 - WARNING - Chi tiết: {'command': 'sudo add-apt-repository universe', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:00,944 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt install libfuse2
+2025-05-12 14:58:00,945 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,946 - WARNING - Chi tiết: {'command': 'sudo apt install libfuse2', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:00,989 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ./cursor.image
+2025-05-12 14:58:00,990 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:00,990 - WARNING - Chi tiết: {'command': './cursor.image', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,036 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ./configure
+2025-05-12 14:58:01,037 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,037 - WARNING - Chi tiết: {'command': './configure', 'user': 'joe', 'timestamp': '2025-05-12 14:58:00', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,078 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: make
+2025-05-12 14:58:01,079 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,080 - WARNING - Chi tiết: {'command': 'make', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,117 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: make install
+2025-05-12 14:58:01,117 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,118 - WARNING - Chi tiết: {'command': 'make install', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:01,161 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ./configure --with-unikey-gtk
+2025-05-12 14:58:01,161 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,162 - WARNING - Chi tiết: {'command': './configure --with-unikey-gtk', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:01,205 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: make
+2025-05-12 14:58:01,206 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,207 - WARNING - Chi tiết: {'command': 'make', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:01,246 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd /x-unikey-1.0.4
+2025-05-12 14:58:01,246 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,246 - WARNING - Chi tiết: {'command': 'cd /x-unikey-1.0.4', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:01,290 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
+2025-05-12 14:58:01,290 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,291 - WARNING - Chi tiết: {'command': 'sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,320 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt-get update
+2025-05-12 14:58:01,321 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,322 - WARNING - Chi tiết: {'command': 'sudo apt-get update', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:01,364 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt-get install ibus ibus-bamboo --install-recommends
+2025-05-12 14:58:01,364 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,365 - WARNING - Chi tiết: {'command': 'sudo apt-get install ibus ibus-bamboo --install-recommends', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:01,410 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ibus restart
+2025-05-12 14:58:01,411 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,411 - WARNING - Chi tiết: {'command': 'ibus restart', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,446 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
+2025-05-12 14:58:01,447 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,448 - WARNING - Chi tiết: {'command': 'env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "[\'BambooUs\', \'Bamboo\']" && gsettings set org.gnome.desktop.input-sources sources "[(\'xkb\', \'us\'), (\'ibus\', \'Bamboo\')]"', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,493 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+2025-05-12 14:58:01,494 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,495 - WARNING - Chi tiết: {'command': 'sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:01,526 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls /mnt//hgfs
+2025-05-12 14:58:01,527 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,528 - WARNING - Chi tiết: {'command': 'ls /mnt//hgfs', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,571 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd python_Proj/
+2025-05-12 14:58:01,572 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,573 - WARNING - Chi tiết: {'command': 'cd python_Proj/', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,617 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: source my_VEnv/bin/activate
+2025-05-12 14:58:01,617 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,618 - WARNING - Chi tiết: {'command': 'source my_VEnv/bin/activate', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,666 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: jupyter notebook
+2025-05-12 14:58:01,667 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,667 - WARNING - Chi tiết: {'command': 'jupyter notebook', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,709 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: /bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt
+2025-05-12 14:58:01,710 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,710 - WARNING - Chi tiết: {'command': '/bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,752 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: /bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt
+2025-05-12 14:58:01,752 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,753 - WARNING - Chi tiết: {'command': '/bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,787 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pip install IPython
+2025-05-12 14:58:01,787 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,787 - WARNING - Chi tiết: {'command': 'pip install IPython', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:01,829 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: /home/joe/python_Proj/my_VEnv/bin/python /home/joe/python_Proj/privilege_Escalation_Detection_Proj/preprocess.py
+2025-05-12 14:58:01,829 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,829 - WARNING - Chi tiết: {'command': '/home/joe/python_Proj/my_VEnv/bin/python /home/joe/python_Proj/privilege_Escalation_Detection_Proj/preprocess.py', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:01,873 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             /bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt
+2025-05-12 14:58:01,878 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,879 - WARNING - Chi tiết: {'command': '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:01,920 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+2025-05-12 14:58:01,921 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,921 - WARNING - Chi tiết: {'command': 'sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:01,965 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls /mnt/hgfs
+2025-05-12 14:58:01,965 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:01,966 - WARNING - Chi tiết: {'command': 'ls /mnt/hgfs', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:02,013 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which sudo
+2025-05-12 14:58:02,013 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,013 - WARNING - Chi tiết: {'command': 'which sudo', 'user': 'joe', 'timestamp': '2025-05-12 14:58:01', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:02,055 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which gcc
+2025-05-12 14:58:02,055 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,056 - WARNING - Chi tiết: {'command': 'which gcc', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:02,098 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which chmod
+2025-05-12 14:58:02,099 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,100 - WARNING - Chi tiết: {'command': 'which chmod', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:02,144 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which getcap
+2025-05-12 14:58:02,144 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,144 - WARNING - Chi tiết: {'command': 'which getcap', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:02,184 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which find
+2025-05-12 14:58:02,184 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,185 - WARNING - Chi tiết: {'command': 'which find', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:02,225 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which cat
+2025-05-12 14:58:02,226 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,227 - WARNING - Chi tiết: {'command': 'which cat', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:02,270 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which su
+2025-05-12 14:58:02,271 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,272 - WARNING - Chi tiết: {'command': 'which su', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:02,313 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo augenrules --load
+2025-05-12 14:58:02,314 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,315 - WARNING - Chi tiết: {'command': 'sudo augenrules --load', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,359 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo auditctl -l
+2025-05-12 14:58:02,360 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,360 - WARNING - Chi tiết: {'command': 'sudo auditctl -l', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,391 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo ausearch -k sudo_exec > sudo_audit_raw.log
+2025-05-12 14:58:02,392 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,392 - WARNING - Chi tiết: {'command': 'sudo ausearch -k sudo_exec > sudo_audit_raw.log', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,426 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo ausearch -k gcc_exec > gcc_audit_raw.log
+2025-05-12 14:58:02,426 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,426 - WARNING - Chi tiết: {'command': 'sudo ausearch -k gcc_exec > gcc_audit_raw.log', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:02,460 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo ausearch -k chmod_exec > chmod_audit_raw.log
+2025-05-12 14:58:02,460 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,460 - WARNING - Chi tiết: {'command': 'sudo ausearch -k chmod_exec > chmod_audit_raw.log', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:02,502 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo ausearch -k getcap_exec > getcap_audit_raw.log
+2025-05-12 14:58:02,503 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,504 - WARNING - Chi tiết: {'command': 'sudo ausearch -k getcap_exec > getcap_audit_raw.log', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:02,551 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo ausearch -k find_exec > find_audit_raw.log
+2025-05-12 14:58:02,552 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,553 - WARNING - Chi tiết: {'command': 'sudo ausearch -k find_exec > find_audit_raw.log', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:02,592 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo ausearch -k cat_exec > cat_audit_raw.log
+2025-05-12 14:58:02,592 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,593 - WARNING - Chi tiết: {'command': 'sudo ausearch -k cat_exec > cat_audit_raw.log', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:02,633 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo ausearch -k su_exec > su_audit_raw.log
+2025-05-12 14:58:02,634 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,635 - WARNING - Chi tiết: {'command': 'sudo ausearch -k su_exec > su_audit_raw.log', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:02,669 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: /home/joe/python_Proj/my_VEnv/bin/python /home/joe/python_Proj/privilege_Escalation_Detection_Proj/convert_audit_toCsv.py
+2025-05-12 14:58:02,669 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,669 - WARNING - Chi tiết: {'command': '/home/joe/python_Proj/my_VEnv/bin/python /home/joe/python_Proj/privilege_Escalation_Detection_Proj/convert_audit_toCsv.py', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,711 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: /bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt
+2025-05-12 14:58:02,712 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,712 - WARNING - Chi tiết: {'command': '/bin/python3 /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/printEnvVariablesToFile.py /home/joe/.vscode/extensions/ms-python.python-2025.2.0-linux-x64/python_files/deactivate/bash/envVars.txt', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,758 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+2025-05-12 14:58:02,759 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,759 - WARNING - Chi tiết: {'command': 'sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:02,803 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls /mnt/hgfs/KaggleData
+2025-05-12 14:58:02,803 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,804 - WARNING - Chi tiết: {'command': 'ls /mnt/hgfs/KaggleData', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,849 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ~
+2025-05-12 14:58:02,850 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,851 - WARNING - Chi tiết: {'command': 'cd ~', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,897 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd /
+2025-05-12 14:58:02,897 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,897 - WARNING - Chi tiết: {'command': 'cd /', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,940 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:02,941 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,942 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:02,975 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls bin
+2025-05-12 14:58:02,975 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:02,975 - WARNING - Chi tiết: {'command': 'ls bin', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:03,019 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: find .bash_history
+2025-05-12 14:58:03,020 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,020 - WARNING - Chi tiết: {'command': 'find .bash_history', 'user': 'joe', 'timestamp': '2025-05-12 14:58:02', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:03,064 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls etc
+2025-05-12 14:58:03,064 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,064 - WARNING - Chi tiết: {'command': 'ls etc', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,106 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cat /etc/bash.bashrc
+2025-05-12 14:58:03,108 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,108 - WARNING - Chi tiết: {'command': 'cat /etc/bash.bashrc', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,148 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ~
+2025-05-12 14:58:03,149 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,149 - WARNING - Chi tiết: {'command': 'cd ~', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,193 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cat ~/.bash_history
+2025-05-12 14:58:03,193 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,193 - WARNING - Chi tiết: {'command': 'cat ~/.bash_history', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,241 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ~
+2025-05-12 14:58:03,241 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,241 - WARNING - Chi tiết: {'command': 'cd ~', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,283 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:03,284 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,285 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,330 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ~/
+2025-05-12 14:58:03,331 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,331 - WARNING - Chi tiết: {'command': 'cd ~/', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,373 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd /
+2025-05-12 14:58:03,374 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,374 - WARNING - Chi tiết: {'command': 'cd /', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,414 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:03,415 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,415 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,460 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pwd ~/.bash_history
+2025-05-12 14:58:03,460 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,460 - WARNING - Chi tiết: {'command': 'pwd ~/.bash_history', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,504 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ..
+2025-05-12 14:58:03,505 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,505 - WARNING - Chi tiết: {'command': 'cd ..', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,543 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd ~
+2025-05-12 14:58:03,545 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,545 - WARNING - Chi tiết: {'command': 'cd ~', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,590 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pwd ~/.bash_history
+2025-05-12 14:58:03,591 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,591 - WARNING - Chi tiết: {'command': 'pwd ~/.bash_history', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,633 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cd /home/joe
+2025-05-12 14:58:03,634 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,635 - WARNING - Chi tiết: {'command': 'cd /home/joe', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,682 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls
+2025-05-12 14:58:03,683 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,683 - WARNING - Chi tiết: {'command': 'ls', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,717 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pwd -help
+2025-05-12 14:58:03,718 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,718 - WARNING - Chi tiết: {'command': 'pwd -help', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,750 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pwd -h
+2025-05-12 14:58:03,750 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,750 - WARNING - Chi tiết: {'command': 'pwd -h', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,792 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: pwd -LP
+2025-05-12 14:58:03,792 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,793 - WARNING - Chi tiết: {'command': 'pwd -LP', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:03,841 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt update
+2025-05-12 14:58:03,842 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,842 - WARNING - Chi tiết: {'command': 'sudo apt update', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:03,900 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo apt install auditd audispd-plugins -y
+2025-05-12 14:58:03,900 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,901 - WARNING - Chi tiết: {'command': 'sudo apt install auditd audispd-plugins -y', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:03,945 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo systemctl enable auditd
+2025-05-12 14:58:03,946 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,946 - WARNING - Chi tiết: {'command': 'sudo systemctl enable auditd', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:03,977 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo systemctl start auditd
+2025-05-12 14:58:03,978 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:03,978 - WARNING - Chi tiết: {'command': 'sudo systemctl start auditd', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:04,022 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo nano /etc/audit/rules.d/privilege.rules
+2025-05-12 14:58:04,022 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,022 - WARNING - Chi tiết: {'command': 'sudo nano /etc/audit/rules.d/privilege.rules', 'user': 'joe', 'timestamp': '2025-05-12 14:58:03', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:04,064 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which vi
+2025-05-12 14:58:04,065 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,066 - WARNING - Chi tiết: {'command': 'which vi', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,113 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which vim
+2025-05-12 14:58:04,114 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,114 - WARNING - Chi tiết: {'command': 'which vim', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,158 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: which nano
+2025-05-12 14:58:04,158 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,159 - WARNING - Chi tiết: {'command': 'which nano', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,202 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo chmod -R 777 /mnt/hgfs/KaggleData
+2025-05-12 14:58:04,202 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,202 - WARNING - Chi tiết: {'command': 'sudo chmod -R 777 /mnt/hgfs/KaggleData', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': True, 'has_suspicious_args': True, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 3}
+2025-05-12 14:58:04,236 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -ld /mnt/hgfs/KaggleData
+2025-05-12 14:58:04,236 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,236 - WARNING - Chi tiết: {'command': 'ls -ld /mnt/hgfs/KaggleData', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,281 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo chmod -R 777 /mnt/hgfs/KaggleData/audit_privilege_logs.csv
+2025-05-12 14:58:04,283 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,283 - WARNING - Chi tiết: {'command': 'sudo chmod -R 777 /mnt/hgfs/KaggleData/audit_privilege_logs.csv', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': True, 'has_suspicious_args': True, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 3}
+2025-05-12 14:58:04,327 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls /mnt/hgfs/KaggleData
+2025-05-12 14:58:04,328 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,328 - WARNING - Chi tiết: {'command': 'ls /mnt/hgfs/KaggleData', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,365 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: exit ssh
+2025-05-12 14:58:04,366 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,366 - WARNING - Chi tiết: {'command': 'exit ssh', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,414 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo -l
+2025-05-12 14:58:04,415 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,415 - WARNING - Chi tiết: {'command': 'sudo -l', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:04,447 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: sudo su
+2025-05-12 14:58:04,448 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,448 - WARNING - Chi tiết: {'command': 'sudo su', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 2}
+2025-05-12 14:58:04,505 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls /etc
+2025-05-12 14:58:04,505 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,506 - WARNING - Chi tiết: {'command': 'ls /etc', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,556 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: cat /etc/crontab
+2025-05-12 14:58:04,557 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,557 - WARNING - Chi tiết: {'command': 'cat /etc/crontab', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,634 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -l /etc/cron.hourly
+2025-05-12 14:58:04,635 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,635 - WARNING - Chi tiết: {'command': 'ls -l /etc/cron.hourly', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,682 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -l /etc/cron.daily
+2025-05-12 14:58:04,683 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,683 - WARNING - Chi tiết: {'command': 'ls -l /etc/cron.daily', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,736 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -l /etc/cron.weekly
+2025-05-12 14:58:04,737 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,738 - WARNING - Chi tiết: {'command': 'ls -l /etc/cron.weekly', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,779 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -l /etc/cron.monthly
+2025-05-12 14:58:04,779 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,780 - WARNING - Chi tiết: {'command': 'ls -l /etc/cron.monthly', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-12 14:58:04,826 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -ld /etc/cron.daily
+2025-05-12 14:58:04,827 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,828 - WARNING - Chi tiết: {'command': 'ls -ld /etc/cron.daily', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:04,878 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -ld /etc/cron.weekly
+2025-05-12 14:58:04,879 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,879 - WARNING - Chi tiết: {'command': 'ls -ld /etc/cron.weekly', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:04,916 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -ld /etc/cron/monthly
+2025-05-12 14:58:04,917 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,917 - WARNING - Chi tiết: {'command': 'ls -ld /etc/cron/monthly', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:04,963 - WARNING - CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: ls -ld /etc/cron.monthly
+2025-05-12 14:58:04,964 - WARNING - Độ tin cậy: 1.00
+2025-05-12 14:58:04,965 - WARNING - Chi tiết: {'command': 'ls -ld /etc/cron.monthly', 'user': 'joe', 'timestamp': '2025-05-12 14:58:04', 'is_suspicious_command': False, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-12 14:58:05,001 - INFO - Đã dừng giám sát theo yêu cầu người dùng.
+2025-05-12 14:58:11,967 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 14:58:11,970 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 14:58:11,971 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 14:58:11,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:12,969 - INFO - Bắt đầu chế độ giám sát shell trong thời gian thực
+2025-05-12 14:58:16,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:21,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:26,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:31,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:36,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:41,972 - INFO - 127.0.0.1 - - [12/May/2025 14:58:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:46,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:51,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:58:56,973 - INFO - 127.0.0.1 - - [12/May/2025 14:58:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:01,972 - INFO - 127.0.0.1 - - [12/May/2025 14:59:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:06,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:11,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:16,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:21,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:26,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:31,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:36,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:41,972 - INFO - 127.0.0.1 - - [12/May/2025 14:59:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:46,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:51,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 14:59:56,973 - INFO - 127.0.0.1 - - [12/May/2025 14:59:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:01,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:06,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:11,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:16,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:21,974 - INFO - 127.0.0.1 - - [12/May/2025 15:00:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:26,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:31,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:36,972 - INFO - 127.0.0.1 - - [12/May/2025 15:00:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:41,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:46,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:51,973 - INFO - 127.0.0.1 - - [12/May/2025 15:00:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:00:56,972 - INFO - 127.0.0.1 - - [12/May/2025 15:00:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:01,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:06,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:11,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:16,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:21,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:26,972 - INFO - 127.0.0.1 - - [12/May/2025 15:01:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:31,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:36,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:41,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:46,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:51,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:01:56,973 - INFO - 127.0.0.1 - - [12/May/2025 15:01:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:01,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:06,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:11,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:16,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:21,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:26,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:31,972 - INFO - 127.0.0.1 - - [12/May/2025 15:02:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:36,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:41,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:46,974 - INFO - 127.0.0.1 - - [12/May/2025 15:02:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:51,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:02:53,930 - INFO - 127.0.0.1 - - [12/May/2025 15:02:53] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:02:55,845 - INFO - 127.0.0.1 - - [12/May/2025 15:02:55] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:02:56,973 - INFO - 127.0.0.1 - - [12/May/2025 15:02:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:03:01,973 - INFO - 127.0.0.1 - - [12/May/2025 15:03:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:03:06,974 - INFO - 127.0.0.1 - - [12/May/2025 15:03:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:03:11,973 - INFO - 127.0.0.1 - - [12/May/2025 15:03:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:03:16,973 - INFO - 127.0.0.1 - - [12/May/2025 15:03:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:03:21,973 - INFO - 127.0.0.1 - - [12/May/2025 15:03:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:03:26,973 - INFO - 127.0.0.1 - - [12/May/2025 15:03:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:03:31,973 - INFO - 127.0.0.1 - - [12/May/2025 15:03:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:03:48,903 - INFO - Đã dừng shell wrapper.
+2025-05-12 15:03:57,882 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 15:03:57,882 - INFO - Khởi động web server tại port 5000
+2025-05-12 15:03:57,888 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 15:03:57,888 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 15:03:57,888 - INFO -  * Restarting with stat
+2025-05-12 15:03:58,897 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 15:03:58,897 - INFO - Khởi động web server tại port 5000
+2025-05-12 15:03:58,902 - WARNING -  * Debugger is active!
+2025-05-12 15:03:58,902 - INFO -  * Debugger PIN: 132-725-807
+2025-05-12 15:04:46,935 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 15:04:46,935 - INFO - Khởi động web server tại port 5000
+2025-05-12 15:04:46,941 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 15:04:46,941 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 15:04:46,942 - INFO -  * Restarting with stat
+2025-05-12 15:04:47,980 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 15:04:47,980 - INFO - Khởi động web server tại port 5000
+2025-05-12 15:04:47,984 - WARNING -  * Debugger is active!
+2025-05-12 15:04:47,985 - INFO -  * Debugger PIN: 132-725-807
+2025-05-12 15:04:49,559 - INFO - 127.0.0.1 - - [12/May/2025 15:04:49] "GET / HTTP/1.1" 200 -
+2025-05-12 15:04:54,598 - INFO - 127.0.0.1 - - [12/May/2025 15:04:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:04:55,688 - INFO - 127.0.0.1 - - [12/May/2025 15:04:55] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:04:59,598 - INFO - 127.0.0.1 - - [12/May/2025 15:04:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:04,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:04] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:09,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:09] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:14,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:14] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:19,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:19] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:19,691 - INFO - 127.0.0.1 - - [12/May/2025 15:05:19] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:05:24,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:24] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:27,491 - INFO - 127.0.0.1 - - [12/May/2025 15:05:27] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:05:29,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:29] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:34,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:34] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:39,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:44,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:48,426 - INFO - 127.0.0.1 - - [12/May/2025 15:05:48] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:05:49,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:49] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:54,598 - INFO - 127.0.0.1 - - [12/May/2025 15:05:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:05:59,599 - INFO - 127.0.0.1 - - [12/May/2025 15:05:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:04,598 - INFO - 127.0.0.1 - - [12/May/2025 15:06:04] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:09,598 - INFO - 127.0.0.1 - - [12/May/2025 15:06:09] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:14,598 - INFO - 127.0.0.1 - - [12/May/2025 15:06:14] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:19,598 - INFO - 127.0.0.1 - - [12/May/2025 15:06:19] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:24,598 - INFO - 127.0.0.1 - - [12/May/2025 15:06:24] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:29,599 - INFO - 127.0.0.1 - - [12/May/2025 15:06:29] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:34,598 - INFO - 127.0.0.1 - - [12/May/2025 15:06:34] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:39,598 - INFO - 127.0.0.1 - - [12/May/2025 15:06:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:06:44,599 - INFO - 127.0.0.1 - - [12/May/2025 15:06:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:10,348 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-12 15:08:10,352 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 15:08:10,352 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 15:08:11,351 - INFO - Bắt đầu chế độ giám sát shell trong thời gian thực
+2025-05-12 15:08:14,598 - INFO - 127.0.0.1 - - [12/May/2025 15:08:14] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:19,598 - INFO - 127.0.0.1 - - [12/May/2025 15:08:19] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:24,598 - INFO - 127.0.0.1 - - [12/May/2025 15:08:24] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:29,598 - INFO - 127.0.0.1 - - [12/May/2025 15:08:29] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:33,929 - INFO - 127.0.0.1 - - [12/May/2025 15:08:33] "GET / HTTP/1.1" 200 -
+2025-05-12 15:08:35,322 - INFO - 127.0.0.1 - - [12/May/2025 15:08:35] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:39,000 - INFO - 127.0.0.1 - - [12/May/2025 15:08:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:40,322 - INFO - 127.0.0.1 - - [12/May/2025 15:08:40] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:44,000 - INFO - 127.0.0.1 - - [12/May/2025 15:08:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:45,088 - INFO - Đang phân tích lệnh: sudo su -
+2025-05-12 15:08:45,125 - WARNING - Lệnh 'sudo su -' được phát hiện là leo thang đặc quyền (độ tin cậy: 1.00)
+2025-05-12 15:08:45,126 - INFO - 127.0.0.1 - - [12/May/2025 15:08:45] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:08:45,322 - INFO - 127.0.0.1 - - [12/May/2025 15:08:45] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:49,000 - INFO - 127.0.0.1 - - [12/May/2025 15:08:49] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:50,323 - INFO - 127.0.0.1 - - [12/May/2025 15:08:50] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:54,001 - INFO - 127.0.0.1 - - [12/May/2025 15:08:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:55,323 - INFO - 127.0.0.1 - - [12/May/2025 15:08:55] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:08:59,000 - INFO - 127.0.0.1 - - [12/May/2025 15:08:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:00,323 - INFO - 127.0.0.1 - - [12/May/2025 15:09:00] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:04,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:04] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:04,487 - INFO - Đang phân tích lệnh: nano proj.txt
+2025-05-12 15:09:04,488 - INFO - Lệnh 'nano proj.txt' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:09:04,488 - INFO - 127.0.0.1 - - [12/May/2025 15:09:04] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:09:05,323 - INFO - 127.0.0.1 - - [12/May/2025 15:09:05] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:09,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:09] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:10,322 - INFO - 127.0.0.1 - - [12/May/2025 15:09:10] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:14,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:14] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:15,322 - INFO - 127.0.0.1 - - [12/May/2025 15:09:15] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:19,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:19] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:20,323 - INFO - 127.0.0.1 - - [12/May/2025 15:09:20] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:24,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:24] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:25,323 - INFO - 127.0.0.1 - - [12/May/2025 15:09:25] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:29,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:29] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:30,322 - INFO - 127.0.0.1 - - [12/May/2025 15:09:30] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:34,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:34] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:39,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:42,013 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:09:42,014 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:09:42,014 - INFO - 127.0.0.1 - - [12/May/2025 15:09:42] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:09:44,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:46,085 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:09:46,086 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:09:46,086 - INFO - 127.0.0.1 - - [12/May/2025 15:09:46] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:09:49,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:49] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:52,029 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:09:52,030 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:09:52,030 - INFO - 127.0.0.1 - - [12/May/2025 15:09:52] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:09:52,181 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:09:52,182 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:09:52,182 - INFO - 127.0.0.1 - - [12/May/2025 15:09:52] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:09:52,341 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:09:52,341 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:09:52,341 - INFO - 127.0.0.1 - - [12/May/2025 15:09:52] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:09:54,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:59,000 - INFO - 127.0.0.1 - - [12/May/2025 15:09:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:09:59,884 - INFO - Đang phân tích lệnh: sudo gcc --version
+2025-05-12 15:09:59,917 - WARNING - Lệnh 'sudo gcc --version' được phát hiện là leo thang đặc quyền (độ tin cậy: 1.00)
+2025-05-12 15:09:59,918 - INFO - 127.0.0.1 - - [12/May/2025 15:09:59] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:04,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:04] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:06,900 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:10:06,900 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:06,901 - INFO - 127.0.0.1 - - [12/May/2025 15:10:06] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:09,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:09] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:10,371 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:10:10,372 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:10,372 - INFO - 127.0.0.1 - - [12/May/2025 15:10:10] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:10,828 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:10:10,828 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:10,829 - INFO - 127.0.0.1 - - [12/May/2025 15:10:10] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:10,996 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:10:10,996 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:10,997 - INFO - 127.0.0.1 - - [12/May/2025 15:10:10] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:11,163 - INFO - Đang phân tích lệnh: gcc --version
+2025-05-12 15:10:11,164 - INFO - Lệnh 'gcc --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:11,164 - INFO - 127.0.0.1 - - [12/May/2025 15:10:11] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:14,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:14] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:19,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:19] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:24,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:24] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:26,323 - INFO - 127.0.0.1 - - [12/May/2025 15:10:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:27,299 - INFO - Đang phân tích lệnh: vi test.c
+2025-05-12 15:10:27,299 - INFO - Lệnh 'vi test.c' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:27,300 - INFO - 127.0.0.1 - - [12/May/2025 15:10:27] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:29,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:29] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:32,259 - INFO - Đang phân tích lệnh: vi test.txt
+2025-05-12 15:10:32,260 - INFO - Lệnh 'vi test.txt' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:32,261 - INFO - 127.0.0.1 - - [12/May/2025 15:10:32] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:32,691 - INFO - Đang phân tích lệnh: vi test.txt
+2025-05-12 15:10:32,691 - INFO - Lệnh 'vi test.txt' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:32,692 - INFO - 127.0.0.1 - - [12/May/2025 15:10:32] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:32,867 - INFO - Đang phân tích lệnh: vi test.txt
+2025-05-12 15:10:32,867 - INFO - Lệnh 'vi test.txt' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:32,867 - INFO - 127.0.0.1 - - [12/May/2025 15:10:32] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:34,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:34] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:39,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:42,963 - INFO - Đang phân tích lệnh: nano test.txt
+2025-05-12 15:10:42,963 - INFO - Lệnh 'nano test.txt' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:10:42,964 - INFO - 127.0.0.1 - - [12/May/2025 15:10:42] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:10:44,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:49,001 - INFO - 127.0.0.1 - - [12/May/2025 15:10:49] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:54,001 - INFO - 127.0.0.1 - - [12/May/2025 15:10:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:10:59,000 - INFO - 127.0.0.1 - - [12/May/2025 15:10:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:04,001 - INFO - 127.0.0.1 - - [12/May/2025 15:11:04] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:09,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:09] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:14,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:14] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:19,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:19] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:24,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:24] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:26,323 - INFO - 127.0.0.1 - - [12/May/2025 15:11:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:29,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:29] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:34,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:34] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:39,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:44,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:49,001 - INFO - 127.0.0.1 - - [12/May/2025 15:11:49] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:54,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:11:59,000 - INFO - 127.0.0.1 - - [12/May/2025 15:11:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:04,001 - INFO - 127.0.0.1 - - [12/May/2025 15:12:04] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:09,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:09] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:14,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:14] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:16,103 - INFO - Đang phân tích lệnh: pwd
+2025-05-12 15:12:16,104 - INFO - Lệnh 'pwd' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:12:16,104 - INFO - 127.0.0.1 - - [12/May/2025 15:12:16] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:12:19,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:19] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:24,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:24] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:26,323 - INFO - 127.0.0.1 - - [12/May/2025 15:12:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:29,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:29] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:29,526 - INFO - Đang phân tích lệnh: apt --version
+2025-05-12 15:12:29,526 - INFO - Lệnh 'apt --version' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:12:29,527 - INFO - 127.0.0.1 - - [12/May/2025 15:12:29] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:12:34,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:34] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:39,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:42,950 - INFO - Đang phân tích lệnh: exit
+2025-05-12 15:12:42,950 - INFO - Lệnh 'exit' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:12:42,951 - INFO - 127.0.0.1 - - [12/May/2025 15:12:42] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:12:43,390 - INFO - Đang phân tích lệnh: exit
+2025-05-12 15:12:43,390 - INFO - Lệnh 'exit' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:12:43,391 - INFO - 127.0.0.1 - - [12/May/2025 15:12:43] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:12:43,539 - INFO - Đang phân tích lệnh: exit
+2025-05-12 15:12:43,539 - INFO - Lệnh 'exit' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-12 15:12:43,540 - INFO - 127.0.0.1 - - [12/May/2025 15:12:43] "POST /analyze HTTP/1.1" 200 -
+2025-05-12 15:12:44,001 - INFO - 127.0.0.1 - - [12/May/2025 15:12:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:49,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:49] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:54,000 - INFO - 127.0.0.1 - - [12/May/2025 15:12:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:12:59,001 - INFO - 127.0.0.1 - - [12/May/2025 15:12:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-12 15:13:01,511 - INFO - Đã dừng shell wrapper.
+2025-05-12 15:13:04,000 - INFO - 127.0.0.1 - - [12/May/2025 15:13:04] "GET /api/alerts HTTP/1.1" 200 -
