@@ -58,7 +58,7 @@ class ModelMonitor:
             logger.error(f"Lỗi khi tải mô hình: {e}")
             raise
         
-        # Tải lịch sử chỉ số nếu có
+        # Tải lịch sử chỉ số 
         self.metrics_history = self._load_metrics_history()
         self.baseline_metrics = self._get_baseline_metrics()
         

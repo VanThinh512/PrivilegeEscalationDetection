@@ -128,7 +128,7 @@ class PrivilegeEscalationDetector:
             'is_abnormal_activity': 0  # Mặc định là 0, sẽ được cập nhật nếu cần
         }
         
-        # Bổ sung thông tin lịch sử nếu có
+        # Bổ sung thông tin lịch sử 
         if self.history:
             # Tính thời gian kể từ lệnh cuối cùng
             last_cmd = self.history[-1]
@@ -324,9 +324,9 @@ class PrivilegeEscalationDetector:
                 'error': str(e)
             }
     
-    def monitor_command_history(self, interval=5, max_duration=None):
+    def monitor_command_history(self, interval=5, max_duration=None, csv_log_path=None):
         """
-        Giám sát lịch sử lệnh trong terminal
+        Giám sát lịch sử lệnh trong terminal hoặc từ file CSV log đặc quyền
         
         Parameters:
         -----------
@@ -334,116 +334,104 @@ class PrivilegeEscalationDetector:
             Khoảng thời gian giữa các lần kiểm tra (giây)
         max_duration : int, optional
             Thời gian tối đa để giám sát (giây), mặc định là không giới hạn
+        csv_log_path : str, optional
+            Đường dẫn đến file CSV log lệnh đặc quyền (ưu tiên)
         """
         start_time = time.time()
-        last_history_size = 0
         
-        # Tìm đường dẫn đến file lịch sử bash
-        history_file = os.path.expanduser('~/.bash_history')
-        
-        logger.info(f"Bắt đầu giám sát lịch sử lệnh. Nhấn Ctrl+C để dừng.")
-        
-        try:
-            while True:
-                # Kiểm tra thời gian tối đa
-                if max_duration and (time.time() - start_time) > max_duration:
-                    logger.info(f"Đã đạt thời gian tối đa ({max_duration}s). Dừng giám sát.")
-                    break
-                
-                # Đọc lịch sử bash
-                try:
-                    with open(history_file, 'r') as f:
-                        history_lines = f.readlines()
-                    
-                    # Kiểm tra có lệnh mới không
-                    if len(history_lines) > last_history_size:
-                        # Phân tích các lệnh mới
-                        new_commands = history_lines[last_history_size:]
-                        for cmd in new_commands:
-                            cmd = cmd.strip()
-                            if cmd:
-                                # Dự đoán
-                                result = self.predict(cmd)
-                                
-                                # Hiển thị kết quả
+        if csv_log_path:
+            logger.info(f"Đang giám sát file CSV log: {csv_log_path}")
+            # Đọc số dòng hiện có để bỏ qua lệnh cũ (bỏ qua dòng tiêu đề)
+            try:
+                with open(csv_log_path, 'r') as f:
+                    lines = f.readlines()
+                last_line = len(lines)
+                logger.info(f"Đã ghi nhận {last_line-1} lệnh đặc quyền hiện có trong log. Sẽ chỉ giám sát các lệnh mới.")
+            except Exception as e:
+                logger.error(f"Lỗi khi đọc log CSV ban đầu: {e}")
+                last_line = 1
+            logger.info(f"Bắt đầu giám sát log lệnh đặc quyền (Ctrl+C để dừng)...")
+            try:
+                while True:
+                    if max_duration and (time.time() - start_time) > max_duration:
+                        logger.info(f"Đã đạt thời gian tối đa ({max_duration}s). Dừng giám sát.")
+                        break
+                    try:
+                        with open(csv_log_path, 'r') as f:
+                            lines = f.readlines()
+                        current_line = len(lines)
+                        if current_line > last_line:
+                            new_records = lines[last_line:]
+                            logger.info(f"Phát hiện {len(new_records)} lệnh mới trong log đặc quyền")
+                            import csv
+                            from io import StringIO
+                            for row in csv.reader(new_records):
+                                if len(row) < 4:
+                                    continue
+                                timestamp, user, command, args = row[0], row[1], row[2], row[3]
+                                # Đảm bảo không bị lặp command nếu args đã chứa command
+                                args_clean = args.strip().replace('"', '')
+                                if args_clean.startswith(command):
+                                    cmd_full = args_clean
+                                else:
+                                    cmd_full = f"{command} {args_clean}".strip()
+                                result = self.predict(cmd_full, user=user)
                                 if result['is_anomaly']:
-                                    logger.warning(f"CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: {cmd}")
+                                    logger.warning(f"CẢNH BÁO: {timestamp} - {user} - Phát hiện LEO THANG ĐẶC QUYỀN: {cmd_full}")
                                     logger.warning(f"Độ tin cậy: {result['probability']:.2f}")
                                     logger.warning(f"Chi tiết: {result['details']}")
-                                    
-                                    # Hiển thị thông báo trên terminal
-                                    print(f"\033[91m[!] CẢNH BÁO: Lệnh '{cmd}' có thể là leo thang đặc quyền (độ tin cậy: {result['probability']:.2f})\033[0m")
+                                    print(f"\033[91m[!] CẢNH BÁO: {timestamp} - {user} - Lệnh '{cmd_full}' có thể là leo thang đặc quyền (độ tin cậy: {result['probability']:.2f})\033[0m")
                                 else:
-                                    logger.info(f"Lệnh bình thường: {cmd}")
-                        
-                        # Cập nhật kích thước lịch sử
-                        last_history_size = len(history_lines)
-                
-                except Exception as e:
-                    logger.error(f"Lỗi khi đọc lịch sử bash: {e}")
-                
-                # Chờ đến lần kiểm tra tiếp theo
-                time.sleep(interval)
-                
-        except KeyboardInterrupt:
-            logger.info("Đã dừng giám sát theo yêu cầu người dùng.")
+                                    logger.info(f"{timestamp} - {user} - Lệnh bình thường: {cmd_full}")
+                            last_line = current_line
+                    except Exception as e:
+                        logger.error(f"Lỗi khi đọc log CSV: {e}")
+                    time.sleep(interval)
+            except KeyboardInterrupt:
+                logger.info("Đã dừng giám sát log đặc quyền theo yêu cầu người dùng.")
+        else:
+            # Mặc định: giám sát ~/.bash_history như trước
+            history_file = os.path.expanduser('~/.bash_history')
+            try:
+                with open(history_file, 'r') as f:
+                    initial_history_lines = f.readlines()
+                last_history_size = len(initial_history_lines)
+                logger.info(f"Đã ghi nhận {last_history_size} lệnh hiện có trong lịch sử. Sẽ chỉ giám sát các lệnh mới.")
+            except Exception as e:
+                logger.error(f"Lỗi khi đọc lịch sử ban đầu: {e}")
+                last_history_size = 0
+            logger.info(f"Bắt đầu giám sát lịch sử lệnh. Nhấn Ctrl+C để dừng.")
+            try:
+                while True:
+                    if max_duration and (time.time() - start_time) > max_duration:
+                        logger.info(f"Đã đạt thời gian tối đa ({max_duration}s). Dừng giám sát.")
+                        break
+                    try:
+                        with open(history_file, 'r') as f:
+                            history_lines = f.readlines()
+                        current_size = len(history_lines)
+                        if current_size > last_history_size:
+                            new_commands = history_lines[last_history_size:]
+                            logger.info(f"Phát hiện {len(new_commands)} lệnh mới trong lịch sử")
+                            for cmd in new_commands:
+                                cmd = cmd.strip()
+                                if cmd:
+                                    result = self.predict(cmd)
+                                    if result['is_anomaly']:
+                                        logger.warning(f"CẢNH BÁO: Phát hiện LEO THANG ĐẶC QUYỀN: {cmd}")
+                                        logger.warning(f"Độ tin cậy: {result['probability']:.2f}")
+                                        logger.warning(f"Chi tiết: {result['details']}")
+                                        print(f"\033[91m[!] CẢNH BÁO: Lệnh '{cmd}' có thể là leo thang đặc quyền (độ tin cậy: {result['probability']:.2f})\033[0m")
+                                    else:
+                                        logger.info(f"Lệnh bình thường: {cmd}")
+                            last_history_size = current_size
+                    except Exception as e:
+                        logger.error(f"Lỗi khi đọc lịch sử bash: {e}")
+                    time.sleep(interval)
+            except KeyboardInterrupt:
+                logger.info("Đã dừng giám sát theo yêu cầu người dùng.")
     
-    def run_shell_wrapper(self):
-        """
-        Chạy một shell wrapper để giám sát lệnh trong thời gian thực
-        """
-        logger.info("Bắt đầu chế độ giám sát shell trong thời gian thực")
-        
-        # Tạo wrapper script - sửa đổi cách gửi lệnh đến API
-        wrapper_script = """
-        #!/bin/bash
-        
-        # Shell wrapper để giám sát lệnh
-        while true; do
-            # Hiển thị prompt
-            echo -e "\033[92mPrivilege Detection Shell\033[0m $ "
-            read -e command
-            
-            # Thoát nếu nhập exit hoặc quit
-            if [[ "$command" == "exit" || "$command" == "quit" ]]; then
-                echo "Đang thoát..."
-                break
-            fi
-            
-            # Gửi lệnh để phân tích - gửi trực tiếp và hiển thị kết quả
-            result=$(curl -s -X POST -H "Content-Type: application/json" \
-                    -d "{\"command\":\"$command\"}" \
-                    http://localhost:5000/analyze)
-            
-            # Kiểm tra và hiển thị cảnh báo nếu cần
-            is_anomaly=$(echo $result | grep -o '"is_anomaly":true')
-            probability=$(echo $result | grep -o '"probability":[0-9.]*' | cut -d ':' -f2)
-            
-            if [[ ! -z "$is_anomaly" ]]; then
-                echo -e "\033[91m[!] CẢNH BÁO: Lệnh có thể là leo thang đặc quyền (độ tin cậy: $probability)\033[0m"
-            fi
-            
-            # Thực thi lệnh
-            eval "$command"
-        done
-        """
-        
-        # Lưu script vào file tạm thời
-        with open('/tmp/privilege_wrapper.sh', 'w') as f:
-            f.write(wrapper_script)
-        
-        # Cấp quyền thực thi
-        os.chmod('/tmp/privilege_wrapper.sh', 0o755)
-        
-        # Chạy wrapper
-        try:
-            subprocess.run(['/bin/bash', '/tmp/privilege_wrapper.sh'])
-        except KeyboardInterrupt:
-            logger.info("Đã dừng shell wrapper.")
-        finally:
-            # Dọn dẹp
-            if os.path.exists('/tmp/privilege_wrapper.sh'):
-                os.remove('/tmp/privilege_wrapper.sh')
+
 
 # API endpoints
 @app.route('/')
@@ -640,6 +628,7 @@ def main():
                        default='/home/joe/python_Proj/test/privilege_detection_model_latest.pkl',
                        help='Đường dẫn đến file mô hình')
     
+    
     parser.add_argument('--features', '-f',
                        default='/home/joe/python_Proj/test/model_features_latest.pkl',
                        help='Đường dẫn đến file thông tin đặc trưng')
@@ -647,11 +636,14 @@ def main():
     parser.add_argument('--threshold', '-t', type=float, default=0.5,
                        help='Ngưỡng để phát hiện lệnh bất thường (0.0-1.0)')
     
-    parser.add_argument('--mode', choices=['api', 'monitor', 'shell'], default='api',
-                       help='Chế độ hoạt động: api (web server), monitor (giám sát lịch sử), shell (shell wrapper)')
+    parser.add_argument('--mode', choices=['api', 'monitor'], default='api',
+                       help='Chế độ hoạt động: api (web server), monitor (giám sát lịch sử)')
     
     parser.add_argument('--interval', '-i', type=int, default=5,
                        help='Khoảng thời gian giữa các lần kiểm tra (giây)')
+    
+    parser.add_argument('--csv-log-path', type=str, default=None,
+                       help='Đường dẫn tới file CSV log lệnh đặc quyền (ưu tiên cho chế độ monitor)')
     
     parser.add_argument('--port', '-p', type=int, default=5000,
                        help='Cổng cho web server')
@@ -670,17 +662,8 @@ def main():
         logger.info(f"Khởi động web server tại port {args.port}")
         app.run(debug=True, port=args.port)
     elif args.mode == 'monitor':
-        detector.monitor_command_history(interval=args.interval)
-    elif args.mode == 'shell':
-        # Khởi động API server trong một tiến trình khác
-        import threading
-        threading.Thread(target=lambda: app.run(debug=False, port=args.port)).start()
-        
-        # Chờ API server khởi động
-        time.sleep(1)
-        
-        # Chạy shell wrapper
-        detector.run_shell_wrapper()
+        detector.monitor_command_history(interval=args.interval, csv_log_path=args.csv_log_path)
+
     else:
         logger.error(f"Chế độ không hợp lệ: {args.mode}")
 

@@ -146,7 +146,7 @@ def enhance_data(paths, args):
             )
             logger.info(f"Đã tạo {len(privilege_df)} bản ghi lệnh đặc quyền giả lập")
     
-    # 3. Thu thập thêm dữ liệu từ các nguồn khác nếu có
+    # 3. Thu thập thêm dữ liệu từ các nguồn khác 
     if args.external_logs and os.path.exists(args.external_logs):
         external_df = collect_external_logs(args.external_logs)
         if not external_df.empty:
