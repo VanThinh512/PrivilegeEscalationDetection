@@ -128,7 +128,7 @@ class PrivilegeEscalationDetector:
             'is_abnormal_activity': 0  # Mặc định là 0, sẽ được cập nhật nếu cần
         }
         
-        # Bổ sung thông tin lịch sử nếu có
+        # Bổ sung thông tin lịch sử 
         if self.history:
             # Tính thời gian kể từ lệnh cuối cùng
             last_cmd = self.history[-1]
@@ -335,7 +335,7 @@ class PrivilegeEscalationDetector:
         max_duration : int, optional
             Thời gian tối đa để giám sát (giây), mặc định là không giới hạn
         csv_log_path : str, optional
-            Đường dẫn đến file CSV log lệnh đặc quyền (ưu tiên nếu có)
+            Đường dẫn đến file CSV log lệnh đặc quyền (ưu tiên)
         """
         start_time = time.time()
         

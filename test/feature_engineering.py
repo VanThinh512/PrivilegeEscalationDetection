@@ -71,7 +71,7 @@ def extract_additional_features(df):
             
             logger.info("Đã thêm các đặc trưng liên quan đến thời gian")
     
-    # Thêm đặc trưng liên quan đến người dùng và lệnh (nếu có)
+    # Thêm đặc trưng liên quan đến người dùng và lệnh 
     if 'user' in result_df.columns:
         # Nếu có nhiều bản ghi cho mỗi người dùng
         if len(result_df) > len(result_df['user'].unique()):
@@ -84,7 +84,7 @@ def extract_additional_features(df):
             
             logger.info("Đã thêm các đặc trưng liên quan đến tần suất người dùng")
     
-    # Thêm đặc trưng liên quan đến lệnh và tham số (nếu có)
+    # Thêm đặc trưng liên quan đến lệnh và tham số 
     if 'command' in result_df.columns:
         # 6. Đếm số lệnh đặc quyền cho mỗi người dùng
         if 'user' in result_df.columns:
@@ -103,7 +103,7 @@ def extract_additional_features(df):
                 
                 logger.info("Đã thêm các đặc trưng liên quan đến tỷ lệ lệnh đáng ngờ")
     
-    # Thêm đặc trưng thời gian giữa các sự kiện (nếu có datetime)
+    # Thêm đặc trưng thời gian giữa các sự kiện 
     if date_col and pd.api.types.is_datetime64_any_dtype(result_df[date_col]):
         if 'user' in result_df.columns:
             # 8. Thời gian kể từ hoạt động trước của người dùng
@@ -120,7 +120,7 @@ def extract_additional_features(df):
             
             logger.info("Đã thêm các đặc trưng liên quan đến thời gian giữa các hoạt động")
     
-    # Xử lý đặc trưng phân loại nếu có
+    # Xử lý đặc trưng phân loại 
     categorical_cols = result_df.select_dtypes(include=['object', 'category']).columns.tolist()
     for col in categorical_cols:
         if col not in [date_col, 'user'] and result_df[col].nunique() < 10:
