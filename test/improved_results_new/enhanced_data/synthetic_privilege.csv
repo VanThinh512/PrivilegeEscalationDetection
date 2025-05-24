@@ -1,0 +1,501 @@
+timestamp,user,command,args,key
+26/04/2025 20:11,user08,wget | bash,-v,wget | bash_-v
+10/05/2025 00:47,system,chown,-g,chown_-g
+12/05/2025 18:30,user05,su,-R,su_-R
+24/04/2025 14:15,admin,chown,/var/www,chown__var_www
+13/05/2025 11:15,user06,chmod,chmod u+s,chmod_chmod u+s
+15/05/2025 03:40,root,groupadd,chmod u+s,groupadd_chmod u+s
+14/05/2025 12:45,user07,usermod,-p,usermod_-p
+25/04/2025 12:34,user05,visudo,/var/log,visudo__var_log
+08/05/2025 01:53,user03,passwd,-R,passwd_-R
+17/05/2025 21:30,user04,chmod,-r,chmod_-r
+04/05/2025 17:58,user10,su,/var/log,su__var_log
+01/05/2025 03:37,admin,groupadd,-R,groupadd_-R
+29/04/2025 07:14,root,chattr,-r,chattr_-r
+06/05/2025 01:28,user04,setcap,/etc/shadow,setcap__etc_shadow
+24/05/2025 12:41,admin,usermod,--exploit,usermod_--exploit
+14/05/2025 20:20,user07,usermod,if=/dev/zero,usermod_if=_dev_zero
+07/05/2025 22:52,user10,sudo,/var/log,sudo__var_log
+01/05/2025 19:34,user09,cat /etc/crontab,chmod u+s,cat /etc/crontab_chmod u+s
+07/05/2025 04:48,user09,usermod,/var/www,usermod__var_www
+13/05/2025 01:23,user10,passwd,-a,passwd_-a
+10/05/2025 13:00,user02,passwd,-g,passwd_-g
+03/05/2025 16:33,user07,chmod,-R,chmod_-R
+25/04/2025 18:01,user09,sudo -i,/root/.ssh,sudo -i__root_.ssh
+15/05/2025 08:03,user04,passwd,-v,passwd_-v
+26/04/2025 08:06,user05,visudo,/*,visudo__*
+30/04/2025 20:51,user02,sudo,-R,sudo_-R
+02/05/2025 04:09,user07,visudo,/etc/passwd,visudo__etc_passwd
+07/05/2025 20:06,user03,passwd,-r,passwd_-r
+23/05/2025 15:53,root,su,--help,su_--help
+24/04/2025 20:20,user04,groupadd,-p,groupadd_-p
+27/04/2025 02:06,user01,visudo,-v,visudo_-v
+13/05/2025 15:42,user02,pkexec,/usr/local/bin,pkexec__usr_local_bin
+14/05/2025 05:06,user01,sudo,-a,sudo_-a
+21/05/2025 10:30,user10,usermod,-R,usermod_-R
+12/05/2025 19:11,user08,usermod,--help,usermod_--help
+23/05/2025 18:51,root,passwd,/etc/passwd,passwd__etc_passwd
+28/04/2025 23:59,user06,passwd,-R,passwd_-R
+14/05/2025 10:26,user06,chmod,--help,chmod_--help
+28/04/2025 21:31,user02,passwd,-v,passwd_-v
+25/04/2025 00:12,root,passwd,-r,passwd_-r
+04/05/2025 16:46,admin,dd,-g,dd_-g
+19/05/2025 15:55,user03,chmod,-v,chmod_-v
+09/05/2025 04:00,admin,passwd,--help,passwd_--help
+24/04/2025 12:50,user07,sudo,-g,sudo_-g
+03/05/2025 11:37,user04,usermod,/etc/sudoers,usermod__etc_sudoers
+26/04/2025 05:00,admin,usermod,-R,usermod_-R
+13/05/2025 13:59,user01,chown,-p,chown_-p
+26/04/2025 19:25,user02,chmod,/usr/local/bin,chmod__usr_local_bin
+07/05/2025 04:19,user06,setuid,chmod 4755,setuid_chmod 4755
+20/05/2025 09:16,user10,groupadd,/etc/shadow,groupadd__etc_shadow
+28/04/2025 20:58,system,usermod,-g,usermod_-g
+18/05/2025 01:21,user05,sudo,-g,sudo_-g
+18/05/2025 07:23,user10,chown,-a,chown_-a
+30/04/2025 00:20,user06,visudo,/usr/local/bin,visudo__usr_local_bin
+10/05/2025 01:01,user07,passwd,/etc/passwd,passwd__etc_passwd
+28/04/2025 04:40,user09,sudo,-g,sudo_-g
+08/05/2025 18:06,admin,chown,-R,chown_-R
+13/05/2025 00:26,user07,usermod,/var/log,usermod__var_log
+22/05/2025 04:55,admin,usermod,--payload,usermod_--payload
+20/05/2025 21:32,user01,chown,/var/www,chown__var_www
+02/05/2025 20:22,user08,su,/usr/local/bin,su__usr_local_bin
+16/05/2025 15:52,user09,chown,-r,chown_-r
+03/05/2025 19:53,user04,sudo,/opt,sudo__opt
+30/04/2025 06:39,root,su,/usr/local/bin,su__usr_local_bin
+20/05/2025 10:47,root,groupadd,--help,groupadd_--help
+06/05/2025 02:18,system,su,/etc/passwd,su__etc_passwd
+03/05/2025 04:57,user10,chown,/var/www,chown__var_www
+22/05/2025 05:21,user10,cat /etc/shadow,/dev/sda,cat /etc/shadow__dev_sda
+27/04/2025 04:08,user02,su,/opt,su__opt
+20/05/2025 01:53,user05,su,-p,su_-p
+11/05/2025 04:55,admin,usermod,-g,usermod_-g
+28/04/2025 19:15,admin,cat /etc/passwd,-v,cat /etc/passwd_-v
+14/05/2025 12:54,root,su,-p,su_-p
+25/04/2025 10:37,system,chmod,-p,chmod_-p
+04/05/2025 19:25,user07,chown,/var/log,chown__var_log
+12/05/2025 08:30,system,sudo,-p,sudo_-p
+06/05/2025 16:54,user10,passwd,/root/.ssh,passwd__root_.ssh
+04/05/2025 07:15,user02,passwd,-r,passwd_-r
+04/05/2025 11:34,user08,visudo,/opt,visudo__opt
+24/04/2025 13:15,user06,usermod,/opt,usermod__opt
+04/05/2025 19:04,user02,passwd,-p,passwd_-p
+24/05/2025 05:25,user01,chattr,/opt,chattr__opt
+28/04/2025 03:36,system,cat /etc/shadow,-h,cat /etc/shadow_-h
+08/05/2025 20:34,user05,visudo,-h,visudo_-h
+22/05/2025 06:43,user02,chmod,-h,chmod_-h
+15/05/2025 01:51,system,find / -perm -4000,/etc/passwd,find / -perm -4000__etc_passwd
+01/05/2025 12:28,user07,wget | bash,--help,wget | bash_--help
+16/05/2025 04:53,user10,usermod,--help,usermod_--help
+13/05/2025 11:11,system,passwd,/var/log,passwd__var_log
+22/05/2025 14:39,user05,passwd,/opt,passwd__opt
+05/05/2025 11:38,admin,groupadd,-R,groupadd_-R
+29/04/2025 06:38,user03,su,-p,su_-p
+30/04/2025 23:47,user02,sudo su -,/opt,sudo su -__opt
+23/05/2025 02:32,user01,visudo,/var/log,visudo__var_log
+09/05/2025 09:28,user07,curl | bash,/etc/shadow,curl | bash__etc_shadow
+26/04/2025 22:50,user10,visudo,-g,visudo_-g
+20/05/2025 04:24,system,passwd,--help,passwd_--help
+28/04/2025 21:19,user03,passwd,-r,passwd_-r
+10/05/2025 16:41,user05,su,-g,su_-g
+03/05/2025 23:48,user09,passwd,/var/www,passwd__var_www
+18/05/2025 15:45,admin,passwd,-h,passwd_-h
+08/05/2025 17:32,user08,chown,-g,chown_-g
+03/05/2025 07:04,user08,chmod,-h,chmod_-h
+18/05/2025 15:15,admin,passwd,chmod u+s,passwd_chmod u+s
+02/05/2025 09:46,user01,chmod,-r,chmod_-r
+01/05/2025 09:20,user06,chattr,-l,chattr_-l
+11/05/2025 10:36,system,sudo,-p,sudo_-p
+21/05/2025 21:50,user09,visudo,-g,visudo_-g
+26/04/2025 05:05,user10,su,-a,su_-a
+04/05/2025 09:18,user07,chmod,/usr/local/bin,chmod__usr_local_bin
+26/04/2025 14:01,user08,usermod,-v,usermod_-v
+06/05/2025 12:14,user04,chmod,/opt,chmod__opt
+08/05/2025 15:48,user10,passwd,/var/www,passwd__var_www
+20/05/2025 00:46,system,sudo,-p,sudo_-p
+22/05/2025 17:09,user09,passwd,-g,passwd_-g
+09/05/2025 15:06,user03,su,--help,su_--help
+12/05/2025 12:07,system,su,/usr/local/bin,su__usr_local_bin
+06/05/2025 00:43,user04,cat /etc/passwd,/var/www,cat /etc/passwd__var_www
+03/05/2025 13:04,user06,visudo,-l,visudo_-l
+05/05/2025 22:04,user10,groupadd,-R,groupadd_-R
+15/05/2025 07:34,user07,passwd,-p,passwd_-p
+17/05/2025 01:01,user01,chmod,-p,chmod_-p
+07/05/2025 13:07,user01,groupadd,-l,groupadd_-l
+02/05/2025 02:03,user01,su,-l,su_-l
+20/05/2025 17:12,user01,passwd,/opt,passwd__opt
+30/04/2025 13:11,root,chown,-v,chown_-v
+19/05/2025 04:33,user03,groupadd,-r,groupadd_-r
+18/05/2025 15:17,system,chmod,/var/www,chmod__var_www
+05/05/2025 03:21,root,su,/var/log,su__var_log
+02/05/2025 09:02,user07,groupadd,/var/www,groupadd__var_www
+22/05/2025 11:57,user05,dd,-g,dd_-g
+08/05/2025 14:45,system,visudo,/opt,visudo__opt
+14/05/2025 03:19,user05,chmod,/root/.ssh,chmod__root_.ssh
+06/05/2025 04:10,user10,chattr,/var/log,chattr__var_log
+30/04/2025 12:30,user09,groupadd,-v,groupadd_-v
+12/05/2025 07:28,user03,visudo,/etc/passwd,visudo__etc_passwd
+19/05/2025 12:29,user02,visudo,/var/www,visudo__var_www
+16/05/2025 19:24,user04,sudo,/root/.ssh,sudo__root_.ssh
+27/04/2025 06:42,user09,chown,-v,chown_-v
+14/05/2025 09:05,user06,passwd,if=/dev/zero,passwd_if=_dev_zero
+11/05/2025 13:15,user10,groupadd,/opt,groupadd__opt
+15/05/2025 12:46,user07,passwd,/usr/local/bin,passwd__usr_local_bin
+18/05/2025 14:48,root,chmod,/usr/local/bin,chmod__usr_local_bin
+27/04/2025 10:54,user09,passwd,/opt,passwd__opt
+30/04/2025 23:27,user04,chmod,-h,chmod_-h
+20/05/2025 04:40,root,su,-R,su_-R
+23/05/2025 05:12,user06,cat /etc/passwd,/*,cat /etc/passwd__*
+13/05/2025 07:15,user03,usermod,chmod u+s,usermod_chmod u+s
+14/05/2025 14:25,user09,usermod,/var/www,usermod__var_www
+23/05/2025 13:06,user06,groupadd,-g,groupadd_-g
+21/05/2025 01:00,system,su,/opt,su__opt
+21/05/2025 06:09,user07,chown,-a,chown_-a
+02/05/2025 16:26,user03,sudo,-v,sudo_-v
+23/05/2025 11:28,user03,find / -perm -4000,/var/www,find / -perm -4000__var_www
+07/05/2025 22:20,user05,sudo,-h,sudo_-h
+19/05/2025 00:51,user10,chown,/var/log,chown__var_log
+08/05/2025 14:18,user10,usermod,--help,usermod_--help
+07/05/2025 01:05,admin,sudo,-g,sudo_-g
+22/05/2025 00:36,admin,sudo,/usr/local/bin,sudo__usr_local_bin
+16/05/2025 21:28,user05,su,/etc/passwd,su__etc_passwd
+06/05/2025 13:20,user01,usermod,-v,usermod_-v
+10/05/2025 21:10,user03,chmod,/var/log,chmod__var_log
+28/04/2025 08:37,user03,su,-p,su_-p
+18/05/2025 16:56,user06,curl | bash,-p,curl | bash_-p
+08/05/2025 14:02,user01,passwd,-h,passwd_-h
+03/05/2025 05:35,user05,visudo,-h,visudo_-h
+09/05/2025 02:55,system,sudo,-p,sudo_-p
+30/04/2025 11:28,root,chmod,/usr/local/bin,chmod__usr_local_bin
+27/04/2025 12:05,user09,chown,/var/www,chown__var_www
+02/05/2025 21:10,user03,sudo,/etc/passwd,sudo__etc_passwd
+19/05/2025 23:56,user03,passwd,/usr/local/bin,passwd__usr_local_bin
+29/04/2025 22:57,user10,su,/var/www,su__var_www
+09/05/2025 05:25,user10,passwd,/usr/local/bin,passwd__usr_local_bin
+04/05/2025 04:59,user08,chmod,-a,chmod_-a
+29/04/2025 03:04,user06,usermod,-l,usermod_-l
+18/05/2025 00:44,root,groupadd,-r,groupadd_-r
+08/05/2025 00:33,user01,su,-g,su_-g
+02/05/2025 04:52,system,su,/opt,su__opt
+15/05/2025 11:19,system,chmod,/var/log,chmod__var_log
+28/04/2025 17:04,user02,visudo,/opt,visudo__opt
+21/05/2025 23:50,system,su,chmod 4755,su_chmod 4755
+13/05/2025 16:27,user06,groupadd,-r,groupadd_-r
+26/04/2025 21:39,user09,visudo,/etc/passwd,visudo__etc_passwd
+04/05/2025 10:01,user05,chown,-R,chown_-R
+02/05/2025 02:22,user01,chmod,/opt,chmod__opt
+24/04/2025 14:01,user05,su,-p,su_-p
+01/05/2025 08:36,user07,visudo,/opt,visudo__opt
+11/05/2025 15:04,root,chown,/usr/local/bin,chown__usr_local_bin
+08/05/2025 00:27,user05,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'",chmod u+s,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'_chmod u+s"
+10/05/2025 22:55,user08,sudo su -,/var/www,sudo su -__var_www
+16/05/2025 10:14,user05,passwd,-p,passwd_-p
+13/05/2025 16:12,user07,sudo,--help,sudo_--help
+30/04/2025 11:10,system,chmod,-a,chmod_-a
+05/05/2025 10:22,system,gksudo,-v,gksudo_-v
+14/05/2025 10:55,user06,wget | bash,/etc/shadow,wget | bash__etc_shadow
+11/05/2025 12:00,user02,setuid,-R,setuid_-R
+16/05/2025 11:46,user09,visudo,/etc/passwd,visudo__etc_passwd
+02/05/2025 00:34,user08,su,/opt,su__opt
+26/04/2025 18:28,user06,visudo,/etc/shadow,visudo__etc_shadow
+06/05/2025 11:20,user09,passwd,--help,passwd_--help
+13/05/2025 05:15,user03,visudo,/*,visudo__*
+23/05/2025 11:42,user02,usermod,-h,usermod_-h
+26/04/2025 15:19,user05,groupadd,-a,groupadd_-a
+21/05/2025 20:56,user04,visudo,-h,visudo_-h
+23/05/2025 21:45,user01,visudo,/etc/passwd,visudo__etc_passwd
+04/05/2025 13:05,user04,usermod,/usr/local/bin,usermod__usr_local_bin
+13/05/2025 11:57,user02,usermod,/root/.ssh,usermod__root_.ssh
+07/05/2025 07:34,user07,usermod,--help,usermod_--help
+24/04/2025 16:05,user05,usermod,-l,usermod_-l
+17/05/2025 02:20,admin,sudo,/opt,sudo__opt
+22/05/2025 16:51,user04,su,/opt,su__opt
+01/05/2025 17:56,user06,cat /etc/shadow,-p,cat /etc/shadow_-p
+09/05/2025 10:02,user01,chown,-p,chown_-p
+29/04/2025 06:03,system,chown,/etc/passwd,chown__etc_passwd
+13/05/2025 12:59,user05,chattr,-v,chattr_-v
+13/05/2025 15:45,user09,groupadd,-R,groupadd_-R
+25/04/2025 18:44,user01,groupadd,/var/log,groupadd__var_log
+04/05/2025 19:22,root,gksudo,-r,gksudo_-r
+30/04/2025 22:17,user04,su,/opt,su__opt
+18/05/2025 00:15,root,su,--payload,su_--payload
+24/05/2025 06:19,user08,passwd,-R,passwd_-R
+12/05/2025 20:38,root,sudo,-R,sudo_-R
+27/04/2025 07:48,user04,passwd,-v,passwd_-v
+03/05/2025 07:32,user04,groupadd,-r,groupadd_-r
+14/05/2025 01:30,user10,find / -perm -4000,-p,find / -perm -4000_-p
+03/05/2025 07:35,user05,usermod,-R,usermod_-R
+26/04/2025 17:43,user07,passwd,--help,passwd_--help
+04/05/2025 02:35,user07,chmod,--help,chmod_--help
+12/05/2025 04:00,user01,su,-p,su_-p
+11/05/2025 17:30,user09,usermod,/var/www,usermod__var_www
+02/05/2025 22:27,user04,usermod,/usr/local/bin,usermod__usr_local_bin
+09/05/2025 09:13,root,chattr,/var/log,chattr__var_log
+04/05/2025 03:27,user04,groupadd,-h,groupadd_-h
+14/05/2025 18:27,user02,su,--help,su_--help
+06/05/2025 19:21,user02,sudo,/etc/passwd,sudo__etc_passwd
+08/05/2025 22:31,user06,sudo,--help,sudo_--help
+09/05/2025 12:05,user08,usermod,-g,usermod_-g
+25/04/2025 20:22,admin,sudo,/var/log,sudo__var_log
+06/05/2025 06:41,user04,sudo su -,-v,sudo su -_-v
+18/05/2025 15:22,user03,groupadd,--help,groupadd_--help
+27/04/2025 06:41,user05,cat /etc/shadow,-g,cat /etc/shadow_-g
+25/04/2025 11:02,user02,usermod,/usr/local/bin,usermod__usr_local_bin
+15/05/2025 12:27,user05,chown,-h,chown_-h
+07/05/2025 14:45,user03,passwd,-R,passwd_-R
+28/04/2025 18:09,admin,sudo,/var/www,sudo__var_www
+13/05/2025 19:19,admin,chattr,-p,chattr_-p
+19/05/2025 16:34,root,gksudo,/var/log,gksudo__var_log
+20/05/2025 17:09,user08,setcap,--help,setcap_--help
+28/04/2025 08:10,user09,visudo,-l,visudo_-l
+04/05/2025 16:02,user02,chown,-g,chown_-g
+18/05/2025 02:47,user08,chmod,--payload,chmod_--payload
+24/05/2025 03:09,user07,chmod,-g,chmod_-g
+18/05/2025 07:42,user07,usermod,/opt,usermod__opt
+29/04/2025 08:42,user09,su,/var/www,su__var_www
+27/04/2025 05:42,user05,cat /etc/passwd,--help,cat /etc/passwd_--help
+18/05/2025 14:16,root,usermod,--help,usermod_--help
+20/05/2025 06:32,admin,setcap,-r,setcap_-r
+23/05/2025 05:33,root,sudo,-h,sudo_-h
+18/05/2025 01:21,root,chown,-p,chown_-p
+27/04/2025 23:41,user06,chmod,-v,chmod_-v
+13/05/2025 13:17,user05,sudo,-g,sudo_-g
+26/04/2025 14:33,user01,visudo,/var/log,visudo__var_log
+02/05/2025 09:16,user09,visudo,/dev/sda,visudo__dev_sda
+03/05/2025 07:59,user06,su,--help,su_--help
+06/05/2025 08:19,user03,wget | bash,chmod u+s,wget | bash_chmod u+s
+26/04/2025 07:55,user01,sudo,/var/log,sudo__var_log
+05/05/2025 04:14,user04,sudo,/opt,sudo__opt
+27/04/2025 15:04,user04,groupadd,/opt,groupadd__opt
+08/05/2025 12:57,user07,chown,/etc/passwd,chown__etc_passwd
+29/04/2025 10:51,user05,groupadd,-a,groupadd_-a
+14/05/2025 23:27,admin,sudo,-l,sudo_-l
+03/05/2025 21:43,user06,su,-g,su_-g
+06/05/2025 23:46,user07,curl | bash,if=/dev/zero,curl | bash_if=_dev_zero
+27/04/2025 17:15,admin,setcap,--help,setcap_--help
+20/05/2025 15:15,system,curl | bash,if=/dev/zero,curl | bash_if=_dev_zero
+01/05/2025 00:09,system,chmod,/var/www,chmod__var_www
+04/05/2025 22:11,user03,passwd,-p,passwd_-p
+22/05/2025 10:26,user10,visudo,-a,visudo_-a
+09/05/2025 03:50,user07,curl | bash,/etc/sudoers,curl | bash__etc_sudoers
+05/05/2025 11:59,admin,groupadd,-h,groupadd_-h
+18/05/2025 08:34,user04,su,-r,su_-r
+15/05/2025 23:12,user09,chown,/opt,chown__opt
+09/05/2025 17:16,admin,sudo su -,/root/.ssh,sudo su -__root_.ssh
+21/05/2025 08:47,user05,passwd,-v,passwd_-v
+26/04/2025 22:28,admin,visudo,/etc/sudoers,visudo__etc_sudoers
+05/05/2025 15:16,root,usermod,/var/www,usermod__var_www
+06/05/2025 07:46,admin,passwd,-p,passwd_-p
+12/05/2025 05:47,system,groupadd,-v,groupadd_-v
+29/04/2025 11:40,user05,find / -perm -4000,--exploit,find / -perm -4000_--exploit
+30/04/2025 00:39,admin,cat /etc/passwd,if=/dev/zero,cat /etc/passwd_if=_dev_zero
+11/05/2025 21:46,user06,sudo -i,/etc/sudoers,sudo -i__etc_sudoers
+08/05/2025 18:43,user05,visudo,/opt,visudo__opt
+14/05/2025 10:52,user02,groupadd,-r,groupadd_-r
+02/05/2025 06:24,user10,gksudo,/etc/sudoers,gksudo__etc_sudoers
+22/05/2025 12:16,user01,find / -perm -4000,/etc/shadow,find / -perm -4000__etc_shadow
+11/05/2025 10:28,root,su,/root/.ssh,su__root_.ssh
+24/05/2025 12:20,user05,chown,-p,chown_-p
+15/05/2025 07:13,user08,cat /etc/passwd,-a,cat /etc/passwd_-a
+17/05/2025 05:09,system,sudo,-h,sudo_-h
+01/05/2025 14:42,user07,usermod,/etc/passwd,usermod__etc_passwd
+19/05/2025 00:37,user06,cat /etc/passwd,-g,cat /etc/passwd_-g
+15/05/2025 11:58,user03,cat /etc/shadow,--exploit,cat /etc/shadow_--exploit
+30/04/2025 21:53,user06,visudo,chmod u+s,visudo_chmod u+s
+01/05/2025 15:42,user10,chmod,-h,chmod_-h
+06/05/2025 09:20,user04,passwd,-v,passwd_-v
+22/05/2025 23:13,user05,usermod,/opt,usermod__opt
+24/05/2025 06:19,user06,sudo,-v,sudo_-v
+15/05/2025 10:36,user06,visudo,-h,visudo_-h
+23/05/2025 17:06,user05,sudo bash,/etc/sudoers,sudo bash__etc_sudoers
+17/05/2025 05:05,user05,chmod,/opt,chmod__opt
+03/05/2025 17:17,user08,chown,-h,chown_-h
+19/05/2025 11:43,user06,passwd,-v,passwd_-v
+21/05/2025 17:41,user03,groupadd,--help,groupadd_--help
+26/04/2025 22:21,user09,sudo,-r,sudo_-r
+11/05/2025 13:28,user02,groupadd,/opt,groupadd__opt
+29/04/2025 20:36,user06,sudo,-a,sudo_-a
+07/05/2025 19:50,root,su,/etc/passwd,su__etc_passwd
+20/05/2025 10:42,user06,pkexec,--payload,pkexec_--payload
+02/05/2025 05:11,user05,su,/var/www,su__var_www
+26/04/2025 13:23,admin,visudo,-v,visudo_-v
+30/04/2025 02:20,user07,setuid,-a,setuid_-a
+28/04/2025 07:16,user04,sudo,/var/www,sudo__var_www
+17/05/2025 21:14,admin,chown,/usr/local/bin,chown__usr_local_bin
+08/05/2025 04:20,user06,setuid,-a,setuid_-a
+16/05/2025 15:57,user09,chmod,-p,chmod_-p
+22/05/2025 11:59,system,chown,-r,chown_-r
+11/05/2025 15:16,user03,visudo,/var/log,visudo__var_log
+29/04/2025 16:00,system,su,/var/www,su__var_www
+08/05/2025 01:15,user05,sudo -i,/opt,sudo -i__opt
+08/05/2025 03:42,admin,groupadd,-g,groupadd_-g
+16/05/2025 07:52,user04,setcap,-v,setcap_-v
+19/05/2025 17:51,user06,groupadd,-g,groupadd_-g
+29/04/2025 00:43,user08,chown,-R,chown_-R
+12/05/2025 05:04,user08,visudo,--exploit,visudo_--exploit
+15/05/2025 22:54,system,chown,-h,chown_-h
+17/05/2025 06:00,user04,usermod,/var/www,usermod__var_www
+02/05/2025 05:40,user04,groupadd,-h,groupadd_-h
+19/05/2025 07:13,root,chown,-g,chown_-g
+26/04/2025 11:59,user10,passwd,if=/dev/zero,passwd_if=_dev_zero
+14/05/2025 13:55,user01,su,-a,su_-a
+21/05/2025 06:17,admin,passwd,-p,passwd_-p
+23/05/2025 18:41,user10,chown,/etc/passwd,chown__etc_passwd
+16/05/2025 01:59,user05,sudo,--help,sudo_--help
+29/04/2025 14:55,user10,passwd,--help,passwd_--help
+14/05/2025 05:10,user07,su,-r,su_-r
+17/05/2025 18:58,user07,visudo,/etc/passwd,visudo__etc_passwd
+07/05/2025 11:13,user08,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'",/etc/passwd,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'__etc_passwd"
+25/04/2025 12:54,system,usermod,-l,usermod_-l
+06/05/2025 04:39,user10,groupadd,--exploit,groupadd_--exploit
+14/05/2025 22:19,system,sudo,-l,sudo_-l
+05/05/2025 16:03,user01,su,/var/log,su__var_log
+27/04/2025 19:12,user07,visudo,-R,visudo_-R
+17/05/2025 19:20,admin,sudo,-p,sudo_-p
+06/05/2025 10:01,user06,cat /etc/crontab,-l,cat /etc/crontab_-l
+06/05/2025 01:34,user06,chown,--help,chown_--help
+21/05/2025 11:59,user05,visudo,-g,visudo_-g
+04/05/2025 00:30,user02,chmod,/opt,chmod__opt
+09/05/2025 06:53,user05,passwd,-a,passwd_-a
+01/05/2025 15:20,user04,groupadd,/etc/passwd,groupadd__etc_passwd
+18/05/2025 01:39,user07,su,/usr/local/bin,su__usr_local_bin
+28/04/2025 08:08,root,dd,--payload,dd_--payload
+06/05/2025 20:34,user04,chown,--help,chown_--help
+15/05/2025 06:25,user03,chmod,/var/log,chmod__var_log
+02/05/2025 21:45,user06,sudo,-l,sudo_-l
+24/05/2025 12:27,admin,su,/var/www,su__var_www
+14/05/2025 08:56,user06,chown,--help,chown_--help
+16/05/2025 00:24,user10,sudo,-l,sudo_-l
+29/04/2025 16:12,system,setuid,/root/.ssh,setuid__root_.ssh
+25/04/2025 02:15,user01,su,/usr/local/bin,su__usr_local_bin
+25/04/2025 13:19,system,wget | bash,-r,wget | bash_-r
+12/05/2025 06:13,user06,chown,/var/www,chown__var_www
+26/04/2025 19:05,user05,chmod,/var/www,chmod__var_www
+13/05/2025 18:23,user08,chown,/usr/local/bin,chown__usr_local_bin
+17/05/2025 21:54,system,chown,--payload,chown_--payload
+12/05/2025 05:21,user03,sudo,-v,sudo_-v
+24/04/2025 15:02,user04,sudo,/etc/passwd,sudo__etc_passwd
+13/05/2025 04:13,user04,chown,-h,chown_-h
+08/05/2025 17:07,user09,find / -perm -4000,-g,find / -perm -4000_-g
+18/05/2025 16:41,user05,sudo,-h,sudo_-h
+30/04/2025 02:38,user02,chown,/usr/local/bin,chown__usr_local_bin
+25/04/2025 19:57,user08,sudo,-p,sudo_-p
+19/05/2025 01:27,admin,chmod,-l,chmod_-l
+21/05/2025 05:25,root,chown,/usr/local/bin,chown__usr_local_bin
+28/04/2025 16:19,admin,chown,/usr/local/bin,chown__usr_local_bin
+10/05/2025 17:29,user08,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'",--payload,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'_--payload"
+22/05/2025 18:05,user02,su,/etc/sudoers,su__etc_sudoers
+24/04/2025 18:29,user01,chmod,-h,chmod_-h
+02/05/2025 16:20,user03,groupadd,--help,groupadd_--help
+06/05/2025 08:36,user07,sudo,-h,sudo_-h
+10/05/2025 13:55,user08,chmod,-v,chmod_-v
+24/05/2025 09:15,user02,usermod,-R,usermod_-R
+22/05/2025 01:03,user08,chown,-p,chown_-p
+17/05/2025 10:26,user07,groupadd,-v,groupadd_-v
+07/05/2025 06:09,root,usermod,/*,usermod__*
+12/05/2025 18:07,user09,visudo,-a,visudo_-a
+27/04/2025 03:00,admin,su,/var/www,su__var_www
+15/05/2025 16:09,user07,sudo,-g,sudo_-g
+14/05/2025 09:56,user02,setcap,/var/log,setcap__var_log
+11/05/2025 03:54,user08,usermod,-h,usermod_-h
+14/05/2025 16:37,user08,usermod,/opt,usermod__opt
+12/05/2025 18:55,admin,su,-h,su_-h
+21/05/2025 22:55,user07,visudo,/usr/local/bin,visudo__usr_local_bin
+13/05/2025 19:11,user06,sudo,-a,sudo_-a
+15/05/2025 17:39,user04,chmod,/opt,chmod__opt
+04/05/2025 18:02,admin,chmod,/var/www,chmod__var_www
+18/05/2025 08:16,admin,setuid,--help,setuid_--help
+26/04/2025 20:57,user09,usermod,--help,usermod_--help
+18/05/2025 06:18,user05,usermod,-r,usermod_-r
+27/04/2025 10:01,user05,usermod,/etc/passwd,usermod__etc_passwd
+28/04/2025 14:55,system,usermod,-g,usermod_-g
+18/05/2025 17:32,user01,su,-a,su_-a
+28/04/2025 18:24,system,sudo,/etc/sudoers,sudo__etc_sudoers
+11/05/2025 16:29,user08,usermod,-h,usermod_-h
+03/05/2025 10:56,user04,passwd,/opt,passwd__opt
+07/05/2025 21:54,user01,passwd,/usr/local/bin,passwd__usr_local_bin
+01/05/2025 19:40,admin,sudo,/var/log,sudo__var_log
+26/04/2025 19:01,user06,chmod,/opt,chmod__opt
+04/05/2025 01:44,user02,visudo,-p,visudo_-p
+28/04/2025 23:11,user07,groupadd,-v,groupadd_-v
+22/05/2025 02:49,user07,groupadd,-g,groupadd_-g
+09/05/2025 21:57,user01,sudo,-r,sudo_-r
+07/05/2025 03:18,root,chmod,-a,chmod_-a
+14/05/2025 18:33,user03,groupadd,/var/log,groupadd__var_log
+22/05/2025 02:34,user01,usermod,/opt,usermod__opt
+11/05/2025 12:31,user03,su,/etc/passwd,su__etc_passwd
+14/05/2025 22:39,user03,su,/opt,su__opt
+06/05/2025 06:44,system,setcap,--help,setcap_--help
+13/05/2025 23:43,user06,passwd,/opt,passwd__opt
+05/05/2025 18:23,user06,passwd,-r,passwd_-r
+19/05/2025 11:22,admin,sudo,/usr/local/bin,sudo__usr_local_bin
+07/05/2025 19:40,user03,chmod,-r,chmod_-r
+21/05/2025 05:44,user06,setuid,-p,setuid_-p
+10/05/2025 17:35,admin,passwd,/usr/local/bin,passwd__usr_local_bin
+26/04/2025 07:17,user09,su,-h,su_-h
+11/05/2025 20:56,user04,setuid,-l,setuid_-l
+03/05/2025 20:58,user04,usermod,--help,usermod_--help
+25/04/2025 21:37,user06,visudo,--help,visudo_--help
+29/04/2025 13:38,user03,sudo,-h,sudo_-h
+12/05/2025 10:34,user02,usermod,-R,usermod_-R
+03/05/2025 09:27,user04,usermod,/var/www,usermod__var_www
+11/05/2025 00:45,user01,groupadd,-h,groupadd_-h
+08/05/2025 04:45,admin,su,/usr/local/bin,su__usr_local_bin
+12/05/2025 11:50,system,sudo,-p,sudo_-p
+01/05/2025 02:20,system,groupadd,-p,groupadd_-p
+06/05/2025 15:34,user03,cat /etc/crontab,-p,cat /etc/crontab_-p
+02/05/2025 12:41,user09,usermod,--help,usermod_--help
+16/05/2025 02:56,user09,curl | bash,/etc/shadow,curl | bash__etc_shadow
+23/05/2025 17:58,user01,curl | bash,if=/dev/zero,curl | bash_if=_dev_zero
+11/05/2025 11:47,user01,sudo,--help,sudo_--help
+12/05/2025 23:04,user10,passwd,-R,passwd_-R
+02/05/2025 06:32,user05,chown,/etc/passwd,chown__etc_passwd
+21/05/2025 01:50,admin,chown,-h,chown_-h
+10/05/2025 07:46,user10,groupadd,-h,groupadd_-h
+10/05/2025 12:24,admin,groupadd,-v,groupadd_-v
+24/04/2025 21:53,user01,curl | bash,/dev/sda,curl | bash__dev_sda
+03/05/2025 19:13,user08,passwd,/var/log,passwd__var_log
+15/05/2025 22:24,user09,chmod,/usr/local/bin,chmod__usr_local_bin
+22/05/2025 21:51,system,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'",/var/log,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'__var_log"
+06/05/2025 19:21,user06,chown,/var/www,chown__var_www
+15/05/2025 18:40,root,chown,chmod 4755,chown_chmod 4755
+28/04/2025 04:03,user04,sudo bash,--exploit,sudo bash_--exploit
+16/05/2025 16:17,user10,visudo,/var/www,visudo__var_www
+24/04/2025 16:37,root,chmod,/var/log,chmod__var_log
+17/05/2025 20:48,system,passwd,-h,passwd_-h
+12/05/2025 22:47,system,groupadd,-p,groupadd_-p
+07/05/2025 10:35,system,groupadd,/usr/local/bin,groupadd__usr_local_bin
+17/05/2025 16:50,user03,groupadd,/var/log,groupadd__var_log
+25/04/2025 15:21,user06,wget | bash,-v,wget | bash_-v
+14/05/2025 08:22,user08,passwd,-g,passwd_-g
+22/05/2025 15:31,user03,sudo,-r,sudo_-r
+04/05/2025 22:13,user10,visudo,/etc/passwd,visudo__etc_passwd
+29/04/2025 16:30,user10,visudo,/etc/shadow,visudo__etc_shadow
+14/05/2025 16:51,system,groupadd,--help,groupadd_--help
+08/05/2025 12:02,user05,sudo,-g,sudo_-g
+11/05/2025 12:42,user08,chown,-p,chown_-p
+24/05/2025 03:53,user07,chown,-l,chown_-l
+05/05/2025 12:35,admin,cat /etc/passwd,-l,cat /etc/passwd_-l
+30/04/2025 01:08,root,pkexec,-a,pkexec_-a
+17/05/2025 17:18,root,chmod,/var/log,chmod__var_log
+30/04/2025 17:05,user10,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'",/usr/local/bin,"python3 -c 'import os; os.setuid(0); os.system(""/bin/sh"")'__usr_local_bin"
+14/05/2025 18:52,user10,find / -perm -4000,--payload,find / -perm -4000_--payload
+25/04/2025 13:38,user04,visudo,/var/log,visudo__var_log
+07/05/2025 19:13,admin,chown,/var/log,chown__var_log
+13/05/2025 16:34,user10,visudo,-h,visudo_-h
+14/05/2025 18:20,user05,setuid,/etc/sudoers,setuid__etc_sudoers
+01/05/2025 04:26,user08,su,if=/dev/zero,su_if=_dev_zero
+09/05/2025 09:35,user07,chown,-a,chown_-a
+15/05/2025 12:26,user01,chown,/var/log,chown__var_log
+23/05/2025 13:27,user08,usermod,-a,usermod_-a
+15/05/2025 19:50,user02,sudo,-r,sudo_-r
+21/05/2025 03:03,user02,setuid,-g,setuid_-g
+08/05/2025 17:55,user04,su,-r,su_-r
+27/04/2025 10:30,user05,chown,--payload,chown_--payload
+06/05/2025 22:17,user01,groupadd,-l,groupadd_-l
+18/05/2025 00:39,user02,su,/opt,su__opt
+28/04/2025 21:17,user08,usermod,--help,usermod_--help
+03/05/2025 11:45,user08,groupadd,-v,groupadd_-v
+26/04/2025 01:11,user06,sudo -i,--payload,sudo -i_--payload
+20/05/2025 21:10,root,chown,/root/.ssh,chown__root_.ssh
+28/04/2025 22:38,user07,passwd,/etc/passwd,passwd__etc_passwd

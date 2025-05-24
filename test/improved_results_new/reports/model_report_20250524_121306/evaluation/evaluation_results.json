@@ -1,0 +1,185 @@
+{
+    "accuracy": 0.2926829268292683,
+    "precision": 0.2926829268292683,
+    "recall": 1.0,
+    "f1": 0.4528301886792453,
+    "auc": 0.6666666666666666,
+    "avg_precision": 0.5284552845528455,
+    "confusion_matrix": [
+        [
+            0,
+            29
+        ],
+        [
+            0,
+            12
+        ]
+    ],
+    "threshold": 0.5,
+    "feature_importance": [
+        {
+            "feature": "is_abnormal_activity",
+            "importance": 0.6085615927023433
+        },
+        {
+            "feature": "is_suspicious_command",
+            "importance": 0.24629523979639903
+        },
+        {
+            "feature": "hour",
+            "importance": 0.04745979763612547
+        },
+        {
+            "feature": "has_suspicious_args",
+            "importance": 0.021741949602921015
+        },
+        {
+            "feature": "user_user06",
+            "importance": 0.010285680354843113
+        },
+        {
+            "feature": "user_root",
+            "importance": 0.006345924887421711
+        },
+        {
+            "feature": "user_joe",
+            "importance": 0.006176278505325054
+        },
+        {
+            "feature": "user_user20",
+            "importance": 0.006036787750659916
+        },
+        {
+            "feature": "user_user12",
+            "importance": 0.004990621393523779
+        },
+        {
+            "feature": "user_ian",
+            "importance": 0.004565467278126798
+        },
+        {
+            "feature": "user_user11",
+            "importance": 0.004257933570318242
+        },
+        {
+            "feature": "user_frank",
+            "importance": 0.0032415020431480366
+        },
+        {
+            "feature": "user_user27",
+            "importance": 0.003225279113240207
+        },
+        {
+            "feature": "user_user07",
+            "importance": 0.0032248156054286736
+        },
+        {
+            "feature": "user_user09",
+            "importance": 0.002705397182547562
+        },
+        {
+            "feature": "user_user01",
+            "importance": 0.002571605485771805
+        },
+        {
+            "feature": "user_root2",
+            "importance": 0.002492408255610549
+        },
+        {
+            "feature": "user_user04",
+            "importance": 0.0023672455674797416
+        },
+        {
+            "feature": "user_grace",
+            "importance": 0.0017120454510578702
+        },
+        {
+            "feature": "user_hannah",
+            "importance": 0.0014233492365579108
+        },
+        {
+            "feature": "user_user1",
+            "importance": 0.0012870393369025996
+        },
+        {
+            "feature": "user_user05",
+            "importance": 0.001230513959120882
+        },
+        {
+            "feature": "user_user30",
+            "importance": 0.0011148708468923087
+        },
+        {
+            "feature": "user_user03",
+            "importance": 0.001001190521191609
+        },
+        {
+            "feature": "user_user21",
+            "importance": 0.0009076487155089427
+        },
+        {
+            "feature": "user_user14",
+            "importance": 0.0007288203815583119
+        },
+        {
+            "feature": "user_user15",
+            "importance": 0.0007142576043418429
+        },
+        {
+            "feature": "user_user23",
+            "importance": 0.0006944067656136665
+        },
+        {
+            "feature": "user_user25",
+            "importance": 0.0005150519803646989
+        },
+        {
+            "feature": "user_user16",
+            "importance": 0.000511185704547179
+        },
+        {
+            "feature": "user_user26",
+            "importance": 0.0004815711453531445
+        },
+        {
+            "feature": "user_eva",
+            "importance": 0.00038501805474428223
+        },
+        {
+            "feature": "user_jack",
+            "importance": 0.00027968308576966917
+        },
+        {
+            "feature": "user_user19",
+            "importance": 0.00020782584116341637
+        },
+        {
+            "feature": "user_user18",
+            "importance": 0.00020311216869516271
+        },
+        {
+            "feature": "user_user10",
+            "importance": 5.688246938246929e-05
+        },
+        {
+            "feature": "is_weekend",
+            "importance": 0.0
+        },
+        {
+            "feature": "user_dummy_user",
+            "importance": 0.0
+        },
+        {
+            "feature": "is_abnormal_logon",
+            "importance": 0.0
+        },
+        {
+            "feature": "user_user24",
+            "importance": 0.0
+        },
+        {
+            "feature": "user_user29",
+            "importance": 0.0
+        }
+    ]
+}

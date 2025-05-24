@@ -193,9 +193,9 @@ def generate_synthetic_privilege_commands(base_df=None, num_samples=500, output_
     
     return df
 
-def balance_data_with_smote(X, y, random_state=42):
+def balance_data_with_smote(X, y, random_state=42, sampling_strategy=0.8):
     """
-    Cân bằng dữ liệu sử dụng SMOTE
+    Cân bằng dữ liệu bằng phương pháp SMOTE với tỷ lệ mẫu thiểu số cao
     
     Parameters:
     -----------
@@ -205,30 +205,70 @@ def balance_data_with_smote(X, y, random_state=42):
         Nhãn
     random_state : int, default=42
         Giá trị khởi tạo cho quá trình tạo dữ liệu ngẫu nhiên
+    sampling_strategy : float, default=0.8
+        Tỷ lệ mẫu thiểu số so với mẫu đa số sau khi áp dụng SMOTE
+        Giá trị 0.8 nghĩa là số lượng mẫu lớp thiểu số sẽ bằng 80% số lượng mẫu lớp đa số
+        Giá trị 1.0 nghĩa là cân bằng hoàn toàn
         
     Returns:
     --------
     tuple
         (X_resampled, y_resampled)
     """
-    logger.info("Áp dụng SMOTE để cân bằng dữ liệu")
+    logger.info("Áp dụng SMOTE để cân bằng dữ liệu với sampling_strategy={}...".format(sampling_strategy))
     try:
-        smote = SMOTE(random_state=random_state)
-        X_resampled, y_resampled = smote.fit_resample(X, y)
-        
-        # Log thông tin
+        # Kiểm tra nếu dữ liệu quá ít để áp dụng SMOTE
         original_pos = sum(y == 1)
         original_neg = sum(y == 0)
-        new_pos = sum(y_resampled == 1)
-        new_neg = sum(y_resampled == 0)
         
-        logger.info(f"Phân phối ban đầu: {original_neg} negative, {original_pos} positive")
-        logger.info(f"Phân phối sau SMOTE: {new_neg} negative, {new_pos} positive")
+        if original_pos < 5:
+            logger.warning("Số lượng mẫu dương quá ít để áp dụng SMOTE. Áp dụng phương pháp duplicate thay thế.")
+            # Sử dụng phương pháp đơn giản hơn: Nhân bản mẫu thiểu số
+            pos_indices = y[y == 1].index
+            pos_samples = X.loc[pos_indices].copy()
+            pos_labels = y.loc[pos_indices].copy()
+            
+            # Tính số lượng mẫu cần thêm
+            n_samples_needed = int(original_neg * sampling_strategy) - original_pos
+            if n_samples_needed <= 0:
+                logger.info("Không cần thêm mẫu dương.")
+                return X, y
+                
+            # Nhân bản ngẫu nhiên mẫu dương
+            n_copies = n_samples_needed // original_pos + 1
+            for _ in range(n_copies):
+                if len(X.loc[pos_indices]) >= n_samples_needed:
+                    break
+                X = pd.concat([X, pos_samples])
+                y = pd.concat([y, pos_labels])
+                
+            # Cắt bỏ nếu quá nhiều
+            if len(X) - len(pos_indices) > n_samples_needed:
+                X = pd.concat([X.drop(pos_indices), pos_samples.sample(n=n_samples_needed, random_state=random_state)])
+                y = pd.concat([y.drop(pos_indices), pos_labels.sample(n=n_samples_needed, random_state=random_state)])
+                
+            # Log thông tin
+            new_pos = sum(y == 1)
+            new_neg = sum(y == 0)
+        else:
+            # Áp dụng SMOTE với tỷ lệ được chỉ định
+            smote = SMOTE(sampling_strategy=sampling_strategy, random_state=random_state, k_neighbors=min(5, original_pos-1))
+            X_resampled, y_resampled = smote.fit_resample(X, y)
+            X, y = X_resampled, y_resampled
+            
+            # Log thông tin
+            new_pos = sum(y == 1)
+            new_neg = sum(y == 0)
         
-        return X_resampled, y_resampled
+        logger.info(f"Phân phối ban đầu: {original_neg} negative, {original_pos} positive (tỷ lệ: {original_pos/original_neg:.2f})")
+        logger.info(f"Phân phối sau SMOTE: {new_neg} negative, {new_pos} positive (tỷ lệ: {new_pos/new_neg:.2f})")
+        
+        return X, y
     except Exception as e:
         logger.error(f"Lỗi khi áp dụng SMOTE: {e}")
-        return X, y
+        logger.warning("Sẽ sử dụng phương pháp cân bằng đơn giản hơn...")
+        # Áp dụng phương pháp đơn giản: nhân bản mẫu thiểu số
+        return upsample_minority_class_advanced(X, y, target_ratio=sampling_strategy, random_state=random_state)
 
 def collect_external_logs(logs_dir=None):
     """
@@ -299,7 +339,7 @@ def collect_external_logs(logs_dir=None):
         logger.warning("Không tìm thấy log phù hợp. Trả về DataFrame rỗng.")
         return pd.DataFrame()
 
-def upsample_minority_class(df, class_col='is_anomaly', random_state=42):
+def upsample_minority_class(df, class_col='is_anomaly', random_state=42, target_ratio=1.0):
     """
     Tăng số lượng mẫu cho lớp thiểu số bằng phương pháp upsampling
     
@@ -311,13 +351,16 @@ def upsample_minority_class(df, class_col='is_anomaly', random_state=42):
         Tên cột chứa nhãn lớp
     random_state : int, default=42
         Giá trị khởi tạo cho quá trình tạo dữ liệu ngẫu nhiên
+    target_ratio : float, default=1.0
+        Tỷ lệ mẫu thiểu số / mẫu đa số mong muốn sau upsampling
+        Giá trị 1.0 nghĩa là cân bằng hoàn toàn, 0.8 nghĩa là số mẫu thiểu số = 80% số mẫu đa số
         
     Returns:
     --------
     pandas.DataFrame
         DataFrame đã cân bằng
     """
-    logger.info("Tăng số lượng mẫu cho lớp thiểu số")
+    logger.info(f"Tăng số lượng mẫu cho lớp thiểu số với tỷ lệ mục tiêu {target_ratio}")
     
     # Tách dữ liệu thành hai nhóm: lớp đa số và lớp thiểu số
     majority = df[df[class_col] == 0]
@@ -325,13 +368,16 @@ def upsample_minority_class(df, class_col='is_anomaly', random_state=42):
     
     logger.info(f"Phân phối ban đầu: {len(majority)} mẫu lớp đa số, {len(minority)} mẫu lớp thiểu số")
     
-    # Nếu lớp thiểu số có ít hơn một nửa số mẫu lớp đa số, tăng số lượng mẫu
-    if len(minority) < len(majority) / 2:
-        # Tăng số lượng mẫu lớp thiểu số lên bằng lớp đa số
+    # Tính số lượng mẫu thiểu số cần sau upsampling
+    n_samples_needed = int(len(majority) * target_ratio)
+    
+    # Nếu lớp thiểu số ít hơn mục tiêu, upsampling
+    if len(minority) < n_samples_needed:
+        # Tăng số lượng mẫu lớp thiểu số lên đạt tỷ lệ mục tiêu
         minority_upsampled = resample(
             minority,
             replace=True,  # Cho phép lấy mẫu với replacement
-            n_samples=len(majority),
+            n_samples=n_samples_needed,
             random_state=random_state
         )
         
@@ -339,10 +385,71 @@ def upsample_minority_class(df, class_col='is_anomaly', random_state=42):
         df_balanced = pd.concat([majority, minority_upsampled])
         
         logger.info(f"Phân phối sau upsampling: {len(majority)} mẫu lớp đa số, {len(minority_upsampled)} mẫu lớp thiểu số")
+        logger.info(f"Tỷ lệ mới: {len(minority_upsampled)/len(majority):.2f} (mục tiêu: {target_ratio})")
         return df_balanced
     else:
-        logger.info("Dữ liệu đã đủ cân bằng, không cần upsampling")
+        logger.info(f"Dữ liệu đã đủ cân bằng (tỷ lệ hiện tại: {len(minority)/len(majority):.2f}), không cần upsampling")
         return df
+
+def upsample_minority_class_advanced(X, y, target_ratio=1.0, random_state=42):
+    """
+    Phiên bản nâng cao của hàm upsampling cho dữ liệu đã tách X, y
+    
+    Parameters:
+    -----------
+    X : pandas.DataFrame
+        Dữ liệu đặc trưng
+    y : pandas.Series
+        Nhãn phân loại (0 = bình thường, 1 = bất thường)
+    target_ratio : float, default=1.0
+        Tỷ lệ mẫu thiểu số / mẫu đa số mong muốn
+    random_state : int, default=42
+        Giá trị khởi tạo cho quá trình tạo dữ liệu ngẫu nhiên
+        
+    Returns:
+    --------
+    tuple
+        (X_balanced, y_balanced)
+    """
+    logger.info(f"Tăng số lượng mẫu cho lớp thiểu số (nâng cao) với tỷ lệ {target_ratio}")
+    
+    # Đếm mẫu dương và âm
+    negative_count = sum(y == 0)
+    positive_count = sum(y == 1)
+    
+    logger.info(f"Phân phối ban đầu: {negative_count} mẫu âm, {positive_count} mẫu dương")
+    
+    # Tính số lượng mẫu dương cần sau upsampling
+    target_positive_count = int(negative_count * target_ratio)
+    
+    # Nếu đã đủ số lượng, không cần upsampling
+    if positive_count >= target_positive_count:
+        logger.info(f"Số mẫu dương đã đủ ({positive_count} >= {target_positive_count})")
+        return X, y
+    
+    # Tách mẫu dương và âm
+    X_negative = X[y == 0]
+    y_negative = y[y == 0]
+    X_positive = X[y == 1]
+    y_positive = y[y == 1]
+    
+    # Số mẫu dương cần thêm
+    n_samples_to_add = target_positive_count - positive_count
+    
+    # Tạo mẫu dương bằng cách lấy mẫu với thay thế
+    indices = np.random.choice(len(X_positive), size=n_samples_to_add, replace=True)
+    X_positive_upsampled = X_positive.iloc[indices].copy()
+    y_positive_upsampled = pd.Series(np.ones(n_samples_to_add), index=X_positive_upsampled.index)
+    
+    # Kết hợp lại
+    X_balanced = pd.concat([X_negative, X_positive, X_positive_upsampled])
+    y_balanced = pd.concat([y_negative, y_positive, y_positive_upsampled])
+    
+    # Log kết quả
+    logger.info(f"Phân phối sau upsampling: {negative_count} mẫu âm, {positive_count + n_samples_to_add} mẫu dương")
+    logger.info(f"Tỷ lệ mới: {(positive_count + n_samples_to_add)/negative_count:.2f} (mục tiêu: {target_ratio})")
+    
+    return X_balanced, y_balanced
 
 if __name__ == "__main__":
     # Thử nghiệm các hàm
