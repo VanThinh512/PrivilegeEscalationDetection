@@ -1401,3 +1401,88 @@
 2025-05-18 21:38:07,160 - WARNING - Độ tin cậy: 1.00
 2025-05-18 21:38:07,160 - WARNING - Chi tiết: {'command': 'sudo nano test2.c', 'user': 'joe', 'timestamp': '2025-05-18 21:38:07', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
 2025-05-18 21:38:48,392 - INFO - Đã dừng giám sát log đặc quyền theo yêu cầu người dùng.
+2025-05-22 09:13:10,315 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-22 09:13:10,315 - INFO - Đang giám sát file CSV log: /mnt/hgfs/KaggleData/NewKaggleData/privilege_commands.csv
+2025-05-22 09:13:10,319 - INFO - Đã ghi nhận 330 lệnh đặc quyền hiện có trong log. Sẽ chỉ giám sát các lệnh mới.
+2025-05-22 09:13:10,319 - INFO - Bắt đầu giám sát log lệnh đặc quyền (Ctrl+C để dừng)...
+2025-05-22 09:13:34,483 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-22 09:13:34,537 - WARNING - CẢNH BÁO: 2025-05-22 09:13:33 - joe - Phát hiện LEO THANG ĐẶC QUYỀN: su jack
+2025-05-22 09:13:34,537 - WARNING - Độ tin cậy: 1.00
+2025-05-22 09:13:34,538 - WARNING - Chi tiết: {'command': 'su jack', 'user': 'joe', 'timestamp': '2025-05-22 09:13:34', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 0}
+2025-05-22 09:13:42,553 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-22 09:13:42,586 - WARNING - CẢNH BÁO: 2025-05-22 09:13:41 - joe - Phát hiện LEO THANG ĐẶC QUYỀN: su user19
+2025-05-22 09:13:42,586 - WARNING - Độ tin cậy: 1.00
+2025-05-22 09:13:42,587 - WARNING - Chi tiết: {'command': 'su user19', 'user': 'joe', 'timestamp': '2025-05-22 09:13:42', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-22 09:14:28,676 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-22 09:14:28,676 - INFO - 2025-05-22 09:14:27 - user19 - Lệnh bình thường: gcc --version
+2025-05-22 09:15:52,856 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-22 09:15:52,856 - INFO - 2025-05-22 09:15:51 - user19 - Lệnh bình thường: find / -perm -4000 -type f
+2025-05-22 09:18:41,194 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-22 09:18:41,194 - INFO - 2025-05-22 09:18:41 - user19 - Lệnh bình thường: find / -type f -perm -0002 -name *.conf
+2025-05-22 09:19:39,316 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-22 09:19:39,345 - WARNING - CẢNH BÁO: 2025-05-22 09:19:37 - user19 - Phát hiện LEO THANG ĐẶC QUYỀN: sudo /usr/bin/mount -o loop /tmp/exploit.img /tmp/loopmnt
+2025-05-22 09:19:39,345 - WARNING - Độ tin cậy: 0.99
+2025-05-22 09:19:39,345 - WARNING - Chi tiết: {'command': 'sudo /usr/bin/mount -o loop /tmp/exploit.img /tmp/loopmnt', 'user': 'user19', 'timestamp': '2025-05-22 09:19:39', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 0.9912727272727274, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-24 10:33:21,548 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-24 10:33:21,548 - INFO - Khởi động web server tại port 5001
+2025-05-24 10:33:21,569 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-05-24 10:33:21,569 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-24 10:33:21,571 - INFO -  * Restarting with stat
+2025-05-24 10:33:22,933 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-24 10:33:22,933 - INFO - Khởi động web server tại port 5001
+2025-05-24 10:33:22,939 - WARNING -  * Debugger is active!
+2025-05-24 10:33:23,011 - INFO -  * Debugger PIN: 508-600-175
+2025-05-24 10:33:36,667 - INFO - 127.0.0.1 - - [24/May/2025 10:33:36] "GET / HTTP/1.1" 200 -
+2025-05-24 10:33:36,821 - INFO - 127.0.0.1 - - [24/May/2025 10:33:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-24 10:33:41,698 - INFO - 127.0.0.1 - - [24/May/2025 10:33:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:33:46,699 - INFO - 127.0.0.1 - - [24/May/2025 10:33:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:33:51,697 - INFO - 127.0.0.1 - - [24/May/2025 10:33:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:33:56,580 - INFO - Đang phân tích lệnh: find / -perm -4000 2>/dev/null 
+2025-05-24 10:33:56,581 - INFO - Lệnh 'find / -perm -4000 2>/dev/null ' được phân loại là bình thường (độ tin cậy: 0.90)
+2025-05-24 10:33:56,582 - INFO - 127.0.0.1 - - [24/May/2025 10:33:56] "POST /analyze HTTP/1.1" 200 -
+2025-05-24 10:33:56,706 - INFO - 127.0.0.1 - - [24/May/2025 10:33:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:01,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:03,156 - INFO - Đang phân tích lệnh: cat /etc/passwd
+2025-05-24 10:34:03,230 - WARNING - Lệnh 'cat /etc/passwd' được phát hiện là leo thang đặc quyền (độ tin cậy: 1.00)
+2025-05-24 10:34:03,231 - INFO - 127.0.0.1 - - [24/May/2025 10:34:03] "POST /analyze HTTP/1.1" 200 -
+2025-05-24 10:34:06,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:11,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:16,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:21,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:26,697 - INFO - 127.0.0.1 - - [24/May/2025 10:34:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:31,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:34,605 - INFO - 127.0.0.1 - - [24/May/2025 10:34:34] "GET /?vscodeBrowserReqId=1748057674595 HTTP/1.1" 200 -
+2025-05-24 10:34:36,697 - INFO - 127.0.0.1 - - [24/May/2025 10:34:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:39,670 - INFO - 127.0.0.1 - - [24/May/2025 10:34:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:41,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:44,669 - INFO - 127.0.0.1 - - [24/May/2025 10:34:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:46,700 - INFO - 127.0.0.1 - - [24/May/2025 10:34:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:49,670 - INFO - 127.0.0.1 - - [24/May/2025 10:34:49] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:51,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:54,669 - INFO - 127.0.0.1 - - [24/May/2025 10:34:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:56,698 - INFO - 127.0.0.1 - - [24/May/2025 10:34:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:34:59,669 - INFO - 127.0.0.1 - - [24/May/2025 10:34:59] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:01,697 - INFO - 127.0.0.1 - - [24/May/2025 10:35:01] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:04,670 - INFO - 127.0.0.1 - - [24/May/2025 10:35:04] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:06,698 - INFO - 127.0.0.1 - - [24/May/2025 10:35:06] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:09,669 - INFO - 127.0.0.1 - - [24/May/2025 10:35:09] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:11,698 - INFO - 127.0.0.1 - - [24/May/2025 10:35:11] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:14,669 - INFO - 127.0.0.1 - - [24/May/2025 10:35:14] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:16,698 - INFO - 127.0.0.1 - - [24/May/2025 10:35:16] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:19,670 - INFO - 127.0.0.1 - - [24/May/2025 10:35:19] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:21,698 - INFO - 127.0.0.1 - - [24/May/2025 10:35:21] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:24,669 - INFO - 127.0.0.1 - - [24/May/2025 10:35:24] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:26,697 - INFO - 127.0.0.1 - - [24/May/2025 10:35:26] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:29,669 - INFO - 127.0.0.1 - - [24/May/2025 10:35:29] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:31,697 - INFO - 127.0.0.1 - - [24/May/2025 10:35:31] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:34,669 - INFO - 127.0.0.1 - - [24/May/2025 10:35:34] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:36,698 - INFO - 127.0.0.1 - - [24/May/2025 10:35:36] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:39,670 - INFO - 127.0.0.1 - - [24/May/2025 10:35:39] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:41,697 - INFO - 127.0.0.1 - - [24/May/2025 10:35:41] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:44,686 - INFO - 127.0.0.1 - - [24/May/2025 10:35:44] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:46,698 - INFO - 127.0.0.1 - - [24/May/2025 10:35:46] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:49,669 - INFO - 127.0.0.1 - - [24/May/2025 10:35:49] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:51,697 - INFO - 127.0.0.1 - - [24/May/2025 10:35:51] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:54,669 - INFO - 127.0.0.1 - - [24/May/2025 10:35:54] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-24 10:35:56,698 - INFO - 127.0.0.1 - - [24/May/2025 10:35:56] "GET /api/alerts HTTP/1.1" 200 -
