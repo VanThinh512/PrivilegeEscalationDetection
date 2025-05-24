@@ -135,7 +135,9 @@ def generate_synthetic_privilege_commands(base_df=None, num_samples=500, output_
     
     suspicious_commands = [
         'sudo bash', 'sudo su -', 'sudo -i', 'pkexec', 'gksudo', 'setuid', 
-        'setcap', 'chattr', 'dd', 'curl | bash', 'wget | bash'
+        'setcap', 'chattr', 'dd', 'curl | bash', 'wget | bash',
+        'cat /etc/passwd', 'cat /etc/shadow', 'cat /etc/crontab',
+        "python3 -c 'import os; os.setuid(0); os.system(\"/bin/sh\")'",'find / -perm -4000'
     ]
     
     # Định nghĩa đối số bình thường và đáng ngờ

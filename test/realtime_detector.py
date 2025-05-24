@@ -50,12 +50,17 @@ class PrivilegeEscalationDetector:
         self.suspicious_commands = set([
             'sudo', 'su', 'pkexec', 'gksudo', 'kdesudo', 'doas',
             'sudoedit', 'sudo -s', 'sudo -i', 'sudo su', 'su -',
-            'setuid', 'setgid', 'chown', 'chmod u+s', 'chmod g+s'
+            'setuid', 'setgid', 'chown', 'chmod u+s', 'chmod g+s',
+            'cat /etc/passwd', 'cat /etc/shadow', 'cat /etc/crontab', 'cat /etc/sudoers',
+            'find / -perm -4000', 'find / -perm -2000', 'find / -perm -u=s',
+            'python3 -c', 'python -c', 'perl -e', 'ruby -e', 'setcap'
         ])
         self.suspicious_args = set([
-            '/etc/passwd', '/etc/shadow', '/etc/sudoers',
-            '/root/.ssh', '/etc/ssh', 'visudo', '0777',
-            '4755', 'u+s', 'g+s', 'a+rwx', '777', 'bash -i'
+            '/etc/passwd', '/etc/shadow', '/etc/sudoers', '/etc/crontab',
+            '/root/.ssh', '/etc/ssh', 'visudo', '0777', 'os.setuid',
+            '4755', 'u+s', 'g+s', 'a+rwx', '777', 'bash -i', '-perm -4000',
+            'os.system', '/bin/sh', '/bin/bash', '-u=s', '-perm -2000', 
+            'import os', 'exec', 'eval'
         ])
         
         # Tải mô hình và thông tin đặc trưng
