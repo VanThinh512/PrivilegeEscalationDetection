@@ -32,7 +32,7 @@ app = Flask(__name__)
 class PrivilegeEscalationDetector:
     """Phát hiện leo thang đặc quyền trong thời gian thực"""
     
-    def __init__(self, model_path, features_path, threshold=0.5):
+    def __init__(self, model_path, features_path, threshold=0.7):
         """
         Khởi tạo detector
         
@@ -42,11 +42,33 @@ class PrivilegeEscalationDetector:
             Đường dẫn đến file mô hình
         features_path : str
             Đường dẫn đến file thông tin đặc trưng
-        threshold : float, default=0.5
+        threshold : float, default=0.7
             Ngưỡng để phát hiện lệnh bất thường
+        whitelist_path : str, optional
+            Đường dẫn đến file danh sách lệnh an toàn (whitelist), mặc định là None
         """
         self.threshold = threshold
         self.history = []
+        
+        # Thêm whitelist các lệnh an toàn
+        self.safe_commands = set([
+            'ls', 'cd', 'echo', 'pwd', 'date', 'uname', 'clear',
+            'whoami', 'hostname', 'df', 'du', 'cat /etc/hostname',
+            'ps', 'uptime', 'free', 'grep', 'wc', 'sort', 'head', 'tail',
+            'less', 'more', 'cat /proc/cpuinfo', 'cat /proc/meminfo',
+            'ifconfig', 'ip a', 'netstat', 'ping', 'which', 'whereis',
+            'history', 'exit', 'logout', 'man', 'help', 'info'
+        ])
+        
+        # Tải danh sách lệnh an toàn từ file nếu có
+        if whitelist_path:
+            try:
+                with open(whitelist_path, 'r') as f:
+                    self.safe_commands.update(f.read().splitlines())
+                logger.info(f"Đã tải danh sách lệnh an toàn từ {whitelist_path}")
+            except Exception as e:
+                logger.error(f"Lỗi khi tải danh sách lệnh an toàn: {e}")
+        
         self.suspicious_commands = set([
             'sudo', 'su', 'pkexec', 'gksudo', 'kdesudo', 'doas',
             'sudoedit', 'sudo -s', 'sudo -i', 'sudo su', 'su -',
@@ -211,39 +233,65 @@ class PrivilegeEscalationDetector:
     
     def predict(self, command, user=None, timestamp=None):
         """
-        Dự đoán xem lệnh có phải leo thang đặc quyền không
-        
+        Dự đoán lệnh có phải là leo thang đặc quyền
+            
         Parameters:
         -----------
         command : str
-            Lệnh cần phân tích
+            Lệnh cần dự đoán
         user : str, optional
-            Người dùng thực hiện lệnh, mặc định là người dùng hiện tại
-        timestamp : datetime, optional
-            Thời điểm thực hiện lệnh, mặc định là thời gian hiện tại
-            
+            Người dùng thực hiện lệnh
+        timestamp : str, optional
+            Thời điểm thực hiện lệnh
+                
         Returns:
         --------
         dict
-            Kết quả dự đoán và chi tiết
+            Kết quả phân loại
         """
-        if not command:
-            return {
-                'is_anomaly': False,
-                'probability': 0.0,
-                'details': 'Lệnh trống'
-            }
-        
-        if user is None:
-            try:
-                user = os.getlogin()
-            except:
-                user = "unknown"
-        
-        if timestamp is None:
-            timestamp = datetime.now()
-        
         try:
+            if not command:
+                return {
+                    'is_anomaly': False,
+                    'probability': 0.0,
+                    'details': 'Lệnh trống'
+                }
+                
+            if user is None:
+                try:
+                    user = os.getlogin()
+                except:
+                    user = "unknown"
+            
+            if timestamp is None:
+                timestamp = datetime.now()
+                
+            # Kiểm tra nếu lệnh nằm trong danh sách an toàn (whitelist)
+            command_clean = command.strip()
+            for safe_cmd in self.safe_commands:
+                if command_clean == safe_cmd or command_clean.startswith(safe_cmd + ' '):
+                    # Chỉ đơn giản hoá các lệnh cơ bản như ls -la, grep, etc.
+                    if not any(susp_cmd in command_clean for susp_cmd in self.suspicious_commands) and \
+                       not any(susp_arg in command_clean for susp_arg in self.suspicious_args):
+                        logger.debug(f"Lệnh an toàn: {command_clean}")
+                        result = {
+                            'command': command,
+                            'is_anomaly': False, 
+                            'probability': 0.1,
+                            'confidence': 0.8,
+                            'details': {
+                                'user': user,
+                                'is_suspicious_command': False,
+                                'has_suspicious_args': False,
+                                'note': 'Sản lọc bởi whitelist'
+                            }
+                        }
+                        if user:
+                            result['user'] = user
+                        if timestamp:
+                            result['timestamp'] = timestamp
+                        return result
+            
             # Kiểm tra trực tiếp trước dựa trên danh sách lệnh đáng ngờ
             cmd_parts = command.split()
             base_cmd = cmd_parts[0] if cmd_parts else ""
@@ -251,26 +299,28 @@ class PrivilegeEscalationDetector:
             
             is_suspicious_cmd, has_suspicious_args = self.is_suspicious_command(command)
             
-            # Nếu không phải lệnh đáng ngờ và không có tham số đáng ngờ, trả về an toàn luôn
-            # Điều này giúp tránh false positive cho các lệnh thông thường
+            # Nếu không phải lệnh đáng ngờ và không có tham số đáng ngờ, có thể trả về an toàn ngay
             if not is_suspicious_cmd and not has_suspicious_args and base_cmd not in ['su', 'sudo', 'pkexec', 'doas']:
-                # Vẫn xử lý và lưu lệnh vào lịch sử
-                self.process_command(command, user, timestamp)
+                # Kiểm tra thêm các tiêu chí an toàn khác
+                is_likely_safe = True
+                if any(danger_term in command_clean for danger_term in ['setuid', 'setgid', 'chmod u+s', '4755', 'os.system']):
+                    is_likely_safe = False
                 
-                return {
-                    'is_anomaly': False,
-                    'probability': 0.1,  # Xác suất thấp cho lệnh thông thường
-                    'details': {
-                        'command': command,
-                        'user': user,
-                        'timestamp': timestamp.strftime("%Y-%m-%d %H:%M:%S"),
-                        'is_suspicious_command': False,
-                        'has_suspicious_args': False,
-                        'anomaly_probability': 0.1,
-                        'threshold': self.threshold,
-                        'anomaly_signals': 0
+                if is_likely_safe:
+                    features = self.process_command(command, user, timestamp)
+                    return {
+                        'is_anomaly': False,
+                        'probability': 0.1,
+                        'confidence': 0.9,
+                        'details': {
+                            'command': command,
+                            'user': user,
+                            'timestamp': timestamp.strftime("%Y-%m-%d %H:%M:%S") if hasattr(timestamp, 'strftime') else str(timestamp),
+                            'is_suspicious_command': False,
+                            'has_suspicious_args': False,
+                            'note': 'Lệnh thông thường'
+                        }
                     }
-                }
             
             # Xử lý lệnh và tạo đặc trưng
             features = self.process_command(command, user, timestamp)
@@ -295,23 +345,46 @@ class PrivilegeEscalationDetector:
                 # Chuẩn hóa về thang 0-1
                 probabilities = min(1.0, total_signals / 3.0)
             
-            # Quyết định dựa trên ngưỡng
-            prediction = probabilities >= self.threshold
+            # Kiểm tra các trường hợp đặc biệt để tăng hoặc giảm xác suất
+            if 'find / -perm -4000' in command_clean or 'find / -perm -u=s' in command_clean:
+                probabilities = max(probabilities, 0.8)  # Tăng xác suất
             
-            # Đảm bảo các lệnh sudo, su luôn có xác suất cao
+            if 'cat /etc/passwd' in command_clean or 'cat /etc/shadow' in command_clean:
+                probabilities = max(probabilities, 0.75)  # Tăng xác suất
+                
+            if "python" in command_clean and "os.setuid" in command_clean:
+                probabilities = max(probabilities, 0.9)  # Tăng xác suất rất cao
+            
+            # Điều chỉnh ngưỡng dựa trên các tiêu chí khác nhau
+            adjusted_threshold = self.threshold
+            if is_suspicious_cmd:
+                # Giảm ngưỡng xuống nếu là lệnh đáng ngờ
+                adjusted_threshold *= 0.9
+            
+            if not has_suspicious_args and not is_suspicious_cmd:
+                # Tăng ngưỡng lên nếu không có dấu hiệu rõ ràng
+                adjusted_threshold *= 1.2
+            
+            # Đảm bảo các lệnh sudo, su luôn có xác suất cao nhưng cần thêm kiểm tra
             if base_cmd in ['sudo', 'su', 'pkexec', 'doas'] and args:
-                probabilities = max(probabilities, 0.7)  # Tối thiểu 70%
-                prediction = True
+                # Nếu là lệnh sudo cho các lệnh bình thường, giảm xác suất 
+                if any(safe_arg in args for safe_arg in ['apt', 'apt-get', 'yum', 'dnf', 'pacman', 'systemctl']):
+                    probabilities = min(probabilities, 0.6)  # Giảm xác suất cho các lệnh phổ biến
+                else:
+                    probabilities = max(probabilities, 0.65)  # Tăng xác suất cho các lệnh khác
+            
+            # Quyết định cuối cùng
+            prediction = probabilities >= adjusted_threshold
             
             # Thông tin chi tiết
             details = {
                 'command': command,
                 'user': user,
-                'timestamp': timestamp.strftime("%Y-%m-%d %H:%M:%S"),
+                'timestamp': timestamp.strftime("%Y-%m-%d %H:%M:%S") if hasattr(timestamp, 'strftime') else str(timestamp),
                 'is_suspicious_command': bool(features['is_suspicious_command']),
                 'has_suspicious_args': bool(features['has_suspicious_args']),
                 'anomaly_probability': float(probabilities),
-                'threshold': self.threshold,
+                'threshold': float(adjusted_threshold),
                 'anomaly_signals': int(features.get('total_anomaly_signals', 0))
             }
             

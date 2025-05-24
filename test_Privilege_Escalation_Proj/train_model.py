@@ -85,23 +85,51 @@ print(f"Phân phối nhãn trong tập kiểm tra: {np.bincount(y_test)}")
 imbalance_ratio = np.bincount(y_train)[0] / np.bincount(y_train)[1]
 print(f"Tỷ lệ mất cân bằng (negative/positive): {imbalance_ratio:.2f}")
 
-# Nếu dữ liệu mất cân bằng, thêm SMOTE
-use_smote = imbalance_ratio > 2.0  # Nếu tỷ lệ mất cân bằng > 2, áp dụng SMOTE
-if use_smote:
-    print("Áp dụng SMOTE để cân bằng dữ liệu huấn luyện")
-    smote = SMOTE(random_state=42)
+# Áp dụng SMOTE với tỷ lệ hợp lý để cân bằng giữa False Negative và False Positive
+print("Áp dụng SMOTE để cân bằng dữ liệu huấn luyện")
+try:
+    # Điều chỉnh tỷ lệ để giảm false positive nhưng vẫn phát hiện tốt lệnh leo thang đặc quyền
+    # Tỷ lệ 0.5 nghĩa là số mẫu dương bằng 50% số mẫu âm
+    sampling_strategy = 0.5
+    
+    # Nếu số mẫu dương quá ít, điều chỉnh k_neighbors
+    k_neighbors = min(5, np.bincount(y_train)[1]-1) if np.bincount(y_train)[1] > 5 else 1
+    
+    smote = SMOTE(random_state=42, sampling_strategy=sampling_strategy, k_neighbors=k_neighbors)
     X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
     print(f"Phân phối nhãn sau SMOTE: {np.bincount(y_train_resampled)}")
-else:
-    X_train_resampled, y_train_resampled = X_train, y_train
-    print("Không áp dụng SMOTE vì dữ liệu đủ cân bằng")
+    print(f"Tỷ lệ mới: {np.bincount(y_train_resampled)[1]/np.bincount(y_train_resampled)[0]:.2f}")
+except Exception as e:
+    print(f"Lỗi khi áp dụng SMOTE: {e}")
+    print("Áp dụng phương pháp cân bằng đơn giản hơn...")
+    
+    # Sử dụng phương pháp đơn giản: nhân bản mẫu thiểu số
+    positive_indices = np.where(y_train == 1)[0]
+    negative_indices = np.where(y_train == 0)[0]
+    
+    # Tính số mẫu dương cần thêm để đạt tỷ lệ 1:1
+    n_samples_needed = len(negative_indices) - len(positive_indices)
+    
+    # Chọn ngẫu nhiên các mẫu dương để nhân bản
+    if len(positive_indices) > 0 and n_samples_needed > 0:
+        resampled_indices = np.random.choice(positive_indices, size=n_samples_needed, replace=True)
+        X_additional = X_train.iloc[resampled_indices].copy()
+        y_additional = np.ones(n_samples_needed)
+        
+        X_train_resampled = pd.concat([X_train, X_additional])
+        y_train_resampled = np.concatenate([y_train, y_additional])
+        
+        print(f"Phân phối nhãn sau upsampling đơn giản: {np.bincount(y_train_resampled.astype(int))}")
+    else:
+        X_train_resampled, y_train_resampled = X_train, y_train
+        print("Giữ nguyên dữ liệu vì không thể áp dụng cân bằng")
 
 # Đơn giản hóa lưới tham số
 param_grid = {
-    'n_estimators': [50, 100],
-    'max_depth': [10, 20, None],
+    'n_estimators': [100, 200],
+    'max_depth': [15, 20, None],
     'min_samples_split': [2, 5],
-    'class_weight': [None, 'balanced']
+    'class_weight': ['balanced', {0:2, 1:1}, {0:1.5, 1:1.5}]  # Cân bằng lại, tăng trọng số cho lớp âm để giảm false positive
 }
 
 print("\nBắt đầu tối ưu hóa siêu tham số...")
