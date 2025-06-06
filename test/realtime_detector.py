@@ -32,7 +32,7 @@ app = Flask(__name__)
 class PrivilegeEscalationDetector:
     """Phát hiện leo thang đặc quyền trong thời gian thực"""
     
-    def __init__(self, model_path, features_path, threshold=0.7):
+    def __init__(self, model_path, features_path, threshold=0.7, whitelist_path=None):
         """
         Khởi tạo detector
         
