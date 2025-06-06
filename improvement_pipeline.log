@@ -339,3 +339,32 @@
 2025-05-24 12:42:37,013 - INFO - improve_pipeline - === HOÀN THÀNH ĐÁNH GIÁ MÔ HÌNH ===
 2025-05-24 12:42:37,013 - INFO - improve_pipeline - Báo cáo đánh giá đã được lưu tại: /home/joe/python_Proj/test/improved_results_new/reports/model_report_20250524_124235
 2025-05-24 12:42:37,014 - INFO - improve_pipeline - Pipeline cải tiến đã hoàn thành!
+2025-05-27 21:07:12,111 - INFO - improve_pipeline - Đã import thành công các module cải tiến
+2025-05-27 21:07:12,113 - INFO - improve_pipeline - Đã tạo thư mục: /home/joe/python_Proj/test/improved_results_new2/raw_data
+2025-05-27 21:07:12,113 - INFO - improve_pipeline - Đã tạo thư mục: /home/joe/python_Proj/test/improved_results_new2/enhanced_data
+2025-05-27 21:07:12,113 - INFO - improve_pipeline - Đã tạo thư mục: /home/joe/python_Proj/test/improved_results_new2/models
+2025-05-27 21:07:12,114 - INFO - improve_pipeline - Đã tạo thư mục: /home/joe/python_Proj/test/improved_results_new2/reports
+2025-05-27 21:07:12,114 - INFO - improve_pipeline - Đã tạo thư mục: /home/joe/python_Proj/test/improved_results_new2/logs
+2025-05-27 21:07:12,114 - INFO - improve_pipeline - === BẮT ĐẦU CẢI THIỆN DỮ LIỆU ===
+2025-05-27 21:07:12,118 - INFO - improve_pipeline - Đã đọc dữ liệu gốc, kích thước: (135, 9)
+2025-05-27 21:07:12,118 - INFO - data_enhancement - Bắt đầu tạo 500 bản ghi lệnh đặc quyền giả lập
+2025-05-27 21:07:12,143 - INFO - data_enhancement - Đã lưu dữ liệu lệnh đặc quyền giả lập vào /home/joe/python_Proj/test/improved_results_new2/enhanced_data/synthetic_privilege.csv
+2025-05-27 21:07:12,143 - INFO - improve_pipeline - Đã tạo 500 bản ghi lệnh đặc quyền giả lập
+2025-05-27 21:07:12,143 - INFO - improve_pipeline - Tỷ lệ nhãn dương: 42.22%
+2025-05-27 21:07:12,144 - INFO - improve_pipeline - Đã lưu dữ liệu đã cải thiện vào: /home/joe/python_Proj/test/improved_results_new2/enhanced_data/enhanced_data.csv
+2025-05-27 21:07:12,144 - INFO - improve_pipeline - === HOÀN THÀNH CẢI THIỆN DỮ LIỆU ===
+2025-05-27 21:07:12,144 - INFO - improve_pipeline - Bỏ qua bước bổ sung đặc trưng
+2025-05-27 21:07:12,144 - INFO - improve_pipeline - === BẮT ĐẦU ĐÁNH GIÁ MÔ HÌNH ===
+2025-05-27 21:07:12,146 - INFO - improve_pipeline - Đã đọc dữ liệu từ /home/joe/python_Proj/test/improved_results_new2/enhanced_data/enhanced_data.csv, kích thước: (135, 9)
+2025-05-27 21:07:12,147 - INFO - improve_pipeline - Chuẩn bị dữ liệu cho mô hình
+2025-05-27 21:07:12,149 - WARNING - improve_pipeline - Thiếu 35 cột trong dữ liệu mới. Đang thêm các cột thiếu với giá trị 0.
+2025-05-27 21:07:12,157 - INFO - improve_pipeline - Đã chuẩn bị dữ liệu với 41 đặc trưng
+2025-05-27 21:07:12,249 - INFO - model_evaluation - Tạo báo cáo đánh giá mô hình
+2025-05-27 21:07:13,120 - INFO - model_evaluation - Đã hoàn thành đánh giá mô hình
+2025-05-27 21:07:13,120 - INFO - model_evaluation - Bắt đầu giải thích dự đoán mô hình
+2025-05-27 21:07:13,771 - ERROR - model_evaluation - Lỗi khi giải thích mô hình: In v0.20, force plot now requires the base value as the first parameter! Try shap.plots.force(explainer.expected_value, shap_values) or for multi-output models try shap.plots.force(explainer.expected_value[0], shap_values[..., 0]).
+2025-05-27 21:07:13,771 - INFO - model_evaluation - Đã tạo báo cáo HTML tại /home/joe/python_Proj/test/improved_results_new2/reports/model_report_20250527_210712/model_report.html
+2025-05-27 21:07:13,771 - INFO - improve_pipeline - Đã tạo báo cáo đánh giá toàn diện tại: /home/joe/python_Proj/test/improved_results_new2/reports/model_report_20250527_210712
+2025-05-27 21:07:13,772 - INFO - improve_pipeline - === HOÀN THÀNH ĐÁNH GIÁ MÔ HÌNH ===
+2025-05-27 21:07:13,772 - INFO - improve_pipeline - Báo cáo đánh giá đã được lưu tại: /home/joe/python_Proj/test/improved_results_new2/reports/model_report_20250527_210712
+2025-05-27 21:07:13,772 - INFO - improve_pipeline - Pipeline cải tiến đã hoàn thành!

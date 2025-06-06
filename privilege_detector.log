@@ -1486,3 +1486,42 @@
 2025-05-24 10:35:51,697 - INFO - 127.0.0.1 - - [24/May/2025 10:35:51] "GET /api/alerts HTTP/1.1" 200 -
 2025-05-24 10:35:54,669 - INFO - 127.0.0.1 - - [24/May/2025 10:35:54] "GET /api/alerts HTTP/1.1" 200 -
 2025-05-24 10:35:56,698 - INFO - 127.0.0.1 - - [24/May/2025 10:35:56] "GET /api/alerts HTTP/1.1" 200 -
+2025-05-31 12:30:26,373 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-31 12:30:26,373 - INFO - Khởi động web server tại port 5000
+2025-05-31 12:30:26,391 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-31 12:30:26,391 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-31 12:30:26,393 - INFO -  * Restarting with stat
+2025-05-31 12:30:27,631 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-31 12:30:27,631 - INFO - Khởi động web server tại port 5000
+2025-05-31 12:30:27,635 - WARNING -  * Debugger is active!
+2025-05-31 12:30:27,706 - INFO -  * Debugger PIN: 263-196-391
+2025-05-31 12:31:08,576 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-31 12:31:08,577 - INFO - Đang giám sát file CSV log: /mnt/hgfs/KaggleData/NewKaggleData/privilege_commands.csv
+2025-05-31 12:31:08,578 - INFO - Đã ghi nhận 394 lệnh đặc quyền hiện có trong log. Sẽ chỉ giám sát các lệnh mới.
+2025-05-31 12:31:08,579 - INFO - Bắt đầu giám sát log lệnh đặc quyền (Ctrl+C để dừng)...
+2025-05-31 12:31:34,632 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-31 12:31:34,706 - WARNING - CẢNH BÁO: 2025-05-31 12:31:33 - joe - Phát hiện LEO THANG ĐẶC QUYỀN: sudo -i
+2025-05-31 12:31:34,707 - WARNING - Độ tin cậy: 1.00
+2025-05-31 12:31:34,707 - WARNING - Chi tiết: {'command': 'sudo -i', 'user': 'joe', 'timestamp': '2025-05-31 12:31:34', 'is_suspicious_command': True, 'has_suspicious_args': False, 'anomaly_probability': 1.0, 'threshold': 0.45, 'anomaly_signals': 0}
+2025-05-31 12:31:54,744 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-31 12:31:54,744 - INFO - 2025-05-31 12:31:53 - joe - Lệnh bình thường: gcc --version
+2025-05-31 12:32:26,805 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-31 12:32:26,847 - WARNING - CẢNH BÁO: 2025-05-31 12:32:26 - joe - Phát hiện LEO THANG ĐẶC QUYỀN: python3 -c import os; os.setuid(0); os.system(/bin/sh)
+2025-05-31 12:32:26,847 - WARNING - Độ tin cậy: 0.99
+2025-05-31 12:32:26,847 - WARNING - Chi tiết: {'command': 'python3 -c import os; os.setuid(0); os.system(/bin/sh)', 'user': 'joe', 'timestamp': '2025-05-31 12:32:26', 'is_suspicious_command': False, 'has_suspicious_args': True, 'anomaly_probability': 0.99, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-31 12:33:36,983 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-31 12:33:37,028 - WARNING - CẢNH BÁO: 2025-05-31 12:33:36 - joe - Phát hiện LEO THANG ĐẶC QUYỀN: python3 -c import os os.setuid(0) os.system(/bin/sh)
+2025-05-31 12:33:37,029 - WARNING - Độ tin cậy: 0.99
+2025-05-31 12:33:37,029 - WARNING - Chi tiết: {'command': 'python3 -c import os os.setuid(0) os.system(/bin/sh)', 'user': 'joe', 'timestamp': '2025-05-31 12:33:36', 'is_suspicious_command': False, 'has_suspicious_args': True, 'anomaly_probability': 0.99, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-31 12:33:51,057 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-31 12:33:51,094 - WARNING - CẢNH BÁO: 2025-05-31 12:33:49 - joe - Phát hiện LEO THANG ĐẶC QUYỀN: python3 -c import os os.setuid(0) os.system(/bin/bash)
+2025-05-31 12:33:51,095 - WARNING - Độ tin cậy: 0.99
+2025-05-31 12:33:51,096 - WARNING - Chi tiết: {'command': 'python3 -c import os os.setuid(0) os.system(/bin/bash)', 'user': 'joe', 'timestamp': '2025-05-31 12:33:51', 'is_suspicious_command': False, 'has_suspicious_args': True, 'anomaly_probability': 0.99, 'threshold': 0.5, 'anomaly_signals': 1}
+2025-05-31 12:33:57,731 - INFO - Đã dừng giám sát log đặc quyền theo yêu cầu người dùng.
+2025-05-31 13:55:17,805 - INFO - Đã tải mô hình từ /home/joe/python_Proj/test/privilege_detection_model_latest.pkl
+2025-05-31 13:55:17,808 - INFO - Đang giám sát file CSV log: /mnt/hgfs/KaggleData/NewKaggleData/privilege_commands.csv
+2025-05-31 13:55:17,817 - INFO - Đã ghi nhận 401 lệnh đặc quyền hiện có trong log. Sẽ chỉ giám sát các lệnh mới.
+2025-05-31 13:55:17,817 - INFO - Bắt đầu giám sát log lệnh đặc quyền (Ctrl+C để dừng)...
+2025-05-31 13:55:33,898 - INFO - Phát hiện 1 lệnh mới trong log đặc quyền
+2025-05-31 13:55:33,899 - INFO - 2025-05-31 13:55:32 - eva - Lệnh bình thường: find /root -type f -writable
